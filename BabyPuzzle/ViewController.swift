@@ -33,18 +33,20 @@ class ViewController: UIViewController {
     
     //MARK: - GameScene
     
-    func randomGenerate(min : UInt32, max : UInt32) -> UInt32 {
-        let randomValue = (arc4random_uniform(max - min) + min)
-        return randomValue
+    func randomGenerate(min : CGFloat, max : CGFloat) -> CGFloat {
+        let diff = UInt32(max-min)
+        let randomValue = (arc4random_uniform(diff) + UInt32(min))
+        return CGFloat(randomValue)
     }
     
     func generateOriginalFrame(pieceCount : Int, contentFrame : CGRect) -> CGRect {
+        let padding : CGFloat = 50
         let maxLimitForRandomFrame = min(contentFrame.size.width, contentFrame.size.height) / CGFloat(pieceCount)
-        let randomX = randomGenerate(UInt32(contentFrame.origin.x), max: UInt32(contentFrame.size.width))
-        let randomY = randomGenerate(UInt32(contentFrame.origin.y), max: UInt32(contentFrame.size.height))
-        let randomHeight = randomGenerate(50, max: UInt32(maxLimitForRandomFrame))
-        let randomWidth = randomGenerate(50, max: UInt32(maxLimitForRandomFrame))
-        let originalFrame = CGRectMake(CGFloat(randomX), CGFloat(randomY), CGFloat(randomWidth), CGFloat(randomHeight))
+        let randomX = randomGenerate(contentFrame.origin.x, max: contentFrame.size.width - 1.5*padding)
+        let randomY = randomGenerate(contentFrame.origin.y, max: contentFrame.size.height - 1.5*padding)
+        let randomHeight = randomGenerate(padding, max: min(contentFrame.height - randomY, maxLimitForRandomFrame))
+        let randomWidth = randomGenerate(padding, max: min(contentFrame.width - randomX, maxLimitForRandomFrame))        
+        let originalFrame = CGRectMake(randomX, randomY, randomWidth, randomHeight)
         return originalFrame
     }
     
@@ -66,6 +68,7 @@ class ViewController: UIViewController {
     }
     
     func initGameScene(pieceCount : Int = 3) -> Void {
+        puzzlePieces.removeAll()
         let colors = [UIColor.redColor(), UIColor.blueColor(),
                       UIColor.yellowColor(), UIColor.greenColor(),
                       UIColor.cyanColor(), UIColor.orangeColor()]
@@ -83,9 +86,11 @@ class ViewController: UIViewController {
             let shelfFrame = CGRectMake(referenceFrame.origin.x, heightStep * CGFloat(i+1) - (pieceHeight / 2), pieceWidth, pieceHeight)
             let originalFrame = generateNonIntersectingFrame(pieceCount, contentFrame: contentFrame, previousPuzzlePieces: puzzlePieces)
 
-            let placeHolderView = UIView(frame: originalFrame)
+            
+            let convertedFrame = self.view.convertRect(originalFrame, toView: self.gameBackgroundImageView)
+            let placeHolderView = UIView(frame: convertedFrame)
             placeHolderView.backgroundColor = UIColor.blackColor()
-            self.view.addSubview(placeHolderView)
+            self.gameBackgroundImageView.addSubview(placeHolderView)
             
             let puzzlePiece = PuzzlePiece(frame: shelfFrame, correctPositionFrame: originalFrame)
             puzzlePiece.backgroundColor = colors[Int(arc4random_uniform(UInt32(colors.count)))]
@@ -94,6 +99,23 @@ class ViewController: UIViewController {
         }
         
         
+    }
+    
+    //MARK: - ResetScene
+    
+    func reset() {
+        for puzzlePiece in puzzlePieces {
+            puzzlePiece.removeFromSuperview()
+        }
+        
+        for view in self.gameBackgroundImageView.subviews {
+            view.removeFromSuperview()
+        }
+    }
+    
+    @IBAction func resetGameScene() {
+        reset()
+        initGameScene(5)
     }
     
 }

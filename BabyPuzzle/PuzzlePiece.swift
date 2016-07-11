@@ -69,7 +69,11 @@ extension PuzzlePiece {
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         for touch in touches {
-            let point = touch.locationInView(self.superview)
+            var point = touch.locationInView(self.superview)
+            point.x -= frameCorrectPosition.width / 2
+            point.y -= frameCorrectPosition.height
+            
+            
             if(!isPointAcceptiable(point)) {
                 self.frame.origin = point
             } else {
