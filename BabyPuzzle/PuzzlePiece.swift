@@ -10,11 +10,15 @@ import Foundation
 import UIKit
 
 
+protocol PuzzlePieceDelegate {
+    func fitInCorrectPlace(puzzlePiece : PuzzlePiece)
+}
+
 class PuzzlePiece: UIButton {
     
     var frameCorrectPosition : CGRect = CGRectZero
     var frameShelfPosition : CGRect = CGRectZero
-    
+    var delegate : PuzzlePieceDelegate?
     
     //MARK: - Init
     required init(coder aDecoder: NSCoder) {
@@ -22,11 +26,12 @@ class PuzzlePiece: UIButton {
         assert(false, "Please init in code")
     }
     
-    init(frame: CGRect, correctPositionFrame: CGRect) {
+    init(frame: CGRect, correctPositionFrame: CGRect, delegate : PuzzlePieceDelegate) {
         super.init(frame: frame)
         self.layer.cornerRadius = 10
         frameShelfPosition = frame
         frameCorrectPosition = correctPositionFrame
+        self.delegate = delegate
     }
     
     //MARK: - Shrink & Expand
@@ -71,7 +76,7 @@ extension PuzzlePiece {
         for touch in touches {
             var point = touch.locationInView(self.superview)
             point.x -= frameCorrectPosition.width / 2
-            point.y -= frameCorrectPosition.height
+            point.y -= frameCorrectPosition.height / 2
             
             
             if(!isPointAcceptiable(point)) {
@@ -86,8 +91,9 @@ extension PuzzlePiece {
         let point = touches.first!.locationInView(self.superview)
         if(self.frame == frameCorrectPosition) {
             print("Already in correct place!")
+            self.removeFromSuperview()
+            self.delegate?.fitInCorrectPlace(self)
         } else if(isPointAcceptiable(point)) {
-            print("Congratulations!!!")
             moveToFrame(frameCorrectPosition)
         } else {
             shrink()
