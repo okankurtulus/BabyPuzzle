@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PuzzlePieceDelegate {
     
     @IBOutlet var puzzlePieceContainerView: UIView!
     @IBOutlet var separatorView: UIView!
@@ -18,7 +18,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initGameScene(5)
+        self.puzzlePieceContainerView.backgroundColor = UIColor.clearColor()
+        initGameScene()
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +42,7 @@ class ViewController: UIViewController {
     
     func generateOriginalFrame(pieceCount : Int, contentFrame : CGRect) -> CGRect {
         let padding : CGFloat = 50
-        let maxLimitForRandomFrame = min(contentFrame.size.width, contentFrame.size.height) / CGFloat(pieceCount)
+        let maxLimitForRandomFrame = min(contentFrame.size.width, contentFrame.size.height) / 2
         let randomX = randomGenerate(contentFrame.origin.x, max: contentFrame.size.width - 1.5*padding)
         let randomY = randomGenerate(contentFrame.origin.y, max: contentFrame.size.height - 1.5*padding)
         let randomHeight = randomGenerate(padding, max: min(contentFrame.height - randomY, maxLimitForRandomFrame))
@@ -67,11 +68,13 @@ class ViewController: UIViewController {
         }
     }
     
-    func initGameScene(pieceCount : Int = 3) -> Void {
+    func initGameScene(pieceCount : Int = 6) -> Void {
         puzzlePieces.removeAll()
         let colors = [UIColor.redColor(), UIColor.blueColor(),
                       UIColor.yellowColor(), UIColor.greenColor(),
                       UIColor.cyanColor(), UIColor.orangeColor()]
+        
+        let backgroundImageNames = ["bg1", "bg2"]
         
         let isPieceCountValid = (CGFloat(pieceCount) * self.puzzlePieceContainerView.frame.size.width) > self.puzzlePieceContainerView.frame.size.height
         assert(!isPieceCountValid, "Please set piece count to some lower value")
@@ -80,20 +83,26 @@ class ViewController: UIViewController {
         let contentFrame = self.gameBackgroundImageView.frame
         let pieceWidth = referenceFrame.size.width
         let pieceHeight = pieceWidth
-        let heightStep = referenceFrame.size.height / CGFloat(pieceCount + 1)
+        let heightStep = referenceFrame.size.height / (CGFloat(pieceCount + 1))
+        let randomIndex = Int(arc4random_uniform(UInt32(colors.count)))
+        
+        self.gameBackgroundImageView.image = UIImage(named: backgroundImageNames[randomIndex%backgroundImageNames.count])
         
         for i in 0..<pieceCount {
-            let shelfFrame = CGRectMake(referenceFrame.origin.x, heightStep * CGFloat(i+1) - (pieceHeight / 2), pieceWidth, pieceHeight)
+            let shelfFrame = CGRectMake(referenceFrame.origin.x, (heightStep/2) + (heightStep * CGFloat(i)) - (pieceHeight / 2), pieceWidth, pieceHeight)
+            
             let originalFrame = generateNonIntersectingFrame(pieceCount, contentFrame: contentFrame, previousPuzzlePieces: puzzlePieces)
 
+            let pieceColor = colors[(randomIndex + i)%colors.count]
             
             let convertedFrame = self.view.convertRect(originalFrame, toView: self.gameBackgroundImageView)
             let placeHolderView = UIView(frame: convertedFrame)
             placeHolderView.backgroundColor = UIColor.blackColor()
+            placeHolderView.layer.cornerRadius = 10
             self.gameBackgroundImageView.addSubview(placeHolderView)
             
-            let puzzlePiece = PuzzlePiece(frame: shelfFrame, correctPositionFrame: originalFrame)
-            puzzlePiece.backgroundColor = colors[Int(arc4random_uniform(UInt32(colors.count)))]
+            let puzzlePiece = PuzzlePiece(frame: shelfFrame, correctPositionFrame: originalFrame,delegate: self)
+            puzzlePiece.backgroundColor = pieceColor
             puzzlePieces.append(puzzlePiece)
             self.view.addSubview(puzzlePiece)
         }
@@ -115,7 +124,28 @@ class ViewController: UIViewController {
     
     @IBAction func resetGameScene() {
         reset()
-        initGameScene(5)
+        initGameScene()
+    }
+    
+    //Mark: - PuzzlePieceDelegate
+    func fitInCorrectPlace(puzzlePiece : PuzzlePiece) {
+        let convertedFrame = self.view.convertRect(puzzlePiece.frameCorrectPosition, toView: self.gameBackgroundImageView)
+        for view in self.gameBackgroundImageView.subviews {
+            if(view.frame == convertedFrame) {
+                view.removeFromSuperview()
+            }
+        }
+        checkToResetGame()
+    }
+    
+    func checkToResetGame() {
+        for puzzlePiece in puzzlePieces {
+            if(!puzzlePiece.isPointAcceptiable(puzzlePiece.frame.origin)) {
+                print("Some pieces are not in correct state yet")
+                return
+            }
+        }
+        resetGameScene()
     }
     
 }
