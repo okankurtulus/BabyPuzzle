@@ -19,7 +19,6 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.puzzlePieceContainerView.backgroundColor = UIColor.clearColor()
-        initGameScene()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,9 +26,9 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
         print("didReceiveMemoryWarning");
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        resetGameScene()
     }
     
     //MARK: - GameScene
@@ -68,11 +67,11 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
         }
     }
     
-    func initGameScene(pieceCount : Int = 6) -> Void {
+    func initGameScene(pieceCount : Int = 7) -> Void {
         puzzlePieces.removeAll()
         let colors = [UIColor.redColor(), UIColor.blueColor(),
                       UIColor.yellowColor(), UIColor.greenColor(),
-                      UIColor.cyanColor(), UIColor.orangeColor()]
+                      UIColor.cyanColor(), UIColor.orangeColor(), UIColor.purpleColor()]
         
         let backgroundImageNames = ["bg1", "bg2"]
         
@@ -83,13 +82,13 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
         let contentFrame = self.gameBackgroundImageView.frame
         let pieceWidth = referenceFrame.size.width
         let pieceHeight = pieceWidth
-        let heightStep = referenceFrame.size.height / (CGFloat(pieceCount + 1))
+        let heightStep = referenceFrame.size.height / (CGFloat(pieceCount))
         let randomIndex = Int(arc4random_uniform(UInt32(colors.count)))
         
         self.gameBackgroundImageView.image = UIImage(named: backgroundImageNames[randomIndex%backgroundImageNames.count])
         
         for i in 0..<pieceCount {
-            let shelfFrame = CGRectMake(referenceFrame.origin.x, (heightStep/2) + (heightStep * CGFloat(i)) - (pieceHeight / 2), pieceWidth, pieceHeight)
+            let shelfFrame = CGRectMake(referenceFrame.origin.x, 5 + (heightStep/2) + (heightStep * CGFloat(i)) - (pieceHeight / 2), pieceWidth, pieceHeight)
             
             let originalFrame = generateNonIntersectingFrame(pieceCount, contentFrame: contentFrame, previousPuzzlePieces: puzzlePieces)
 
@@ -105,9 +104,8 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
             puzzlePiece.backgroundColor = pieceColor
             puzzlePieces.append(puzzlePiece)
             self.view.addSubview(puzzlePiece)
+            puzzlePiece.shrink()
         }
-        
-        
     }
     
     //MARK: - ResetScene
@@ -124,7 +122,11 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
     
     @IBAction func resetGameScene() {
         reset()
-        initGameScene()
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC)))
+        dispatch_after(delayTime, dispatch_get_main_queue(), {
+            [unowned self] in
+            self.initGameScene()
+        })
     }
     
     //Mark: - PuzzlePieceDelegate
