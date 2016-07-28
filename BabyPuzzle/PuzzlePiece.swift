@@ -14,7 +14,7 @@ protocol PuzzlePieceDelegate {
     func fitInCorrectPlace(puzzlePiece : PuzzlePiece)
 }
 
-class PuzzlePiece: UIButton {
+class PuzzlePiece: UIImageView {
     
     var frameCorrectPosition : CGRect = CGRectZero
     var frameShelfPosition : CGRect = CGRectZero
@@ -29,6 +29,8 @@ class PuzzlePiece: UIButton {
     init(frame: CGRect, correctPositionFrame: CGRect, delegate : PuzzlePieceDelegate) {
         super.init(frame: correctPositionFrame)
         self.layer.cornerRadius = 10
+        self.clipsToBounds = true
+        self.userInteractionEnabled = true
         frameShelfPosition = frame
         frameCorrectPosition = correctPositionFrame
         self.delegate = delegate
@@ -45,7 +47,6 @@ class PuzzlePiece: UIButton {
     func shrink() {
         //assert(self.frame.size != frameShelfPosition.size, "It is already shrinked")
         moveToFrame(frameShelfPosition)
-        print("Shrink - Play sound")
     }
     
     func moveToFrame(toFrame: CGRect, animationDuration : NSTimeInterval = 0.3) {
@@ -63,7 +64,7 @@ extension PuzzlePiece {
         if(!isPointAcceptiable(point)) {
             self.expand()
             self.superview?.bringSubviewToFront(self)
-            print("Expand - Play sound")
+            AudioModel.sharedInstance.expandAudio?.play()
         }
     }
     
@@ -81,7 +82,8 @@ extension PuzzlePiece {
             
             if(!isPointAcceptiable(point)) {
                 self.frame.origin = point
-            } else {
+            } else if (self.frame != self.frameCorrectPosition) {
+                AudioModel.sharedInstance.puzzlePieceFitAudio?.play()
                 moveToFrame(frameCorrectPosition, animationDuration: 0.1)
             }
         }
@@ -90,12 +92,13 @@ extension PuzzlePiece {
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let point = touches.first!.locationInView(self.superview)
         if(self.frame == frameCorrectPosition) {
-            print("Already in correct place!")
             self.removeFromSuperview()
+            AudioModel.sharedInstance.successAudio?.play()
             self.delegate?.fitInCorrectPlace(self)
         } else if(isPointAcceptiable(point)) {
             moveToFrame(frameCorrectPosition)
         } else {
+            AudioModel.sharedInstance.shrinkAudio?.play()
             shrink()
         }
     }

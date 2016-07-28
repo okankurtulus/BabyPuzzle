@@ -20,7 +20,7 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
                   UIColor.yellowColor(), UIColor.greenColor(),
                   UIColor.cyanColor(), UIColor.orangeColor(), UIColor.purpleColor()]
     var backgroundImageNames = ["bg1","bg2","bg3","bg4","bg5","bg6","bg7","bg8","bg9","bg10","bg11","bg12"]
-    
+    let gameStatsModel = GameStatsModel.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +57,19 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
     }
     
     func generateNonIntersectingFrame(pieceCount : Int, contentFrame : CGRect, previousPuzzlePieces : [PuzzlePiece]) -> CGRect {
+        var rect : CGRect?
+        while (true) {
+            rect = tryToGenerateNonIntersectingFrame(pieceCount, contentFrame: contentFrame, previousPuzzlePieces: previousPuzzlePieces)
+            if (rect != nil) {
+                break
+            } else {
+                print("Trying to generate again. Even low possibility, this approach can cause infinite loop")
+            }
+        }
+        return rect!
+    }
+    
+    func tryToGenerateNonIntersectingFrame(pieceCount : Int, contentFrame : CGRect, previousPuzzlePieces : [PuzzlePiece]) -> CGRect? {
         let originalFrame = generateOriginalFrame(pieceCount, contentFrame: contentFrame)
         var intersectionOccurs = false
         for puzzlePiece in previousPuzzlePieces {
@@ -66,8 +79,8 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
             }
         }
         if(intersectionOccurs) {
-            print("Trying to generate again. Even low possibility, this approach can cause infinite loop")
-            return generateNonIntersectingFrame(pieceCount, contentFrame: contentFrame, previousPuzzlePieces: previousPuzzlePieces)
+            print("Intersection occured")
+            return nil
         } else {
             return originalFrame
         }
@@ -76,19 +89,21 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
     func initGameScene(pieceCount : Int = 7) -> Void {
         puzzlePieces.removeAll()
         
-        let randomIndex = Int(arc4random_uniform(UInt32(colors.count)))
-        self.gameBackgroundImageView.image = UIImage(named: backgroundImageNames[randomIndex%backgroundImageNames.count])
+        //let randomIndex = Int(arc4random_uniform(UInt32(colors.count)))
+        
+        let level = gameStatsModel.gameOffset+gameStatsModel.gameLevel
+        self.gameBackgroundImageView.image = UIImage(named: backgroundImageNames[level%backgroundImageNames.count])
+        
+        AudioModel.sharedInstance.backgroundAudio?.play()
         
         for i in 1...pieceCount {
             let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(Double(i * 250) * Double(NSEC_PER_MSEC)))
             dispatch_after(delayTime, dispatch_get_main_queue(), {
                 [unowned self] in
-                self.addPiece(i, pieceCount: pieceCount, level: randomIndex)
+                self.addPiece(i, pieceCount: pieceCount, level: level)
             })
         }
     }
-    
-    
     
     func addPiece(withIndex : Int, pieceCount : Int, level : Int) {
         let referenceFrame = self.puzzlePieceContainerView.frame
@@ -105,17 +120,23 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
         let originalFrame = self.generateNonIntersectingFrame(pieceCount, contentFrame: contentFrame, previousPuzzlePieces: self.puzzlePieces)
         
         let pieceColor = colors[(level + withIndex)%colors.count]
-        
         let convertedFrame = self.view.convertRect(originalFrame, toView: self.gameBackgroundImageView)
         
         let placeHolderView = UIView(frame: convertedFrame)
         let puzzlePiece = PuzzlePiece(frame: shelfFrame, correctPositionFrame: originalFrame,delegate: self)
         
+        
+        let pieceBGImage = ImageModel.cropToBounds(self.gameBackgroundImageView,
+                                                   rect: convertedFrame)
+        
         placeHolderView.backgroundColor = UIColor.blackColor()
-        placeHolderView.layer.cornerRadius = puzzlePiece.layer.cornerRadius
+        placeHolderView.layer.cornerRadius = puzzlePiece.layer.cornerRadius + 2
         self.gameBackgroundImageView.addSubview(placeHolderView)
         
-        puzzlePiece.backgroundColor = pieceColor
+        puzzlePiece.backgroundColor = pieceColor;
+        puzzlePiece.contentMode = UIViewContentMode.ScaleToFill
+        puzzlePiece.image = pieceBGImage
+        
         self.puzzlePieces.append(puzzlePiece)
         self.view.addSubview(puzzlePiece)
         puzzlePiece.shrink()
@@ -134,9 +155,19 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
         for view in self.gameBackgroundImageView.subviews {
             view.removeFromSuperview()
         }
+        
+        gameStatsModel.gameLevel += 1
     }
     
     @IBAction func resetGameScene() {
+        for puzzlePiece in puzzlePieces {
+            if(!puzzlePiece.isPointAcceptiable(puzzlePiece.frame.origin)
+                && (puzzlePiece.frame != puzzlePiece.frameShelfPosition)) {
+                print("Some pieces are still in move. Wait and try again.")
+                return
+            }
+        }
+        
         reset()
         let pieceCount = self.gameBackgroundImageView.frame.size.height / self.puzzlePieceContainerView.frame.size.height
         

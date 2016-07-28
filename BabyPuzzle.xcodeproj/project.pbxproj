@@ -7,15 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57C0600088799A47BE131848 /* Pods_BabyPuzzle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E474BEC546997AC2AC4BE9DC /* Pods_BabyPuzzle.framework */; };
+		B1520A0E1D4A2C9900F04C9B /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1520A0D1D4A2C9900F04C9B /* ImageModel.swift */; };
+		B15C234D1D49E04200C90417 /* AudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15C234C1D49E04200C90417 /* AudioModel.swift */; };
+		B15C23591D49F7E400C90417 /* background.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C23551D49F7E400C90417 /* background.wav */; };
+		B15C235A1D49F7E400C90417 /* expand.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C23561D49F7E400C90417 /* expand.wav */; };
+		B15C235B1D49F7E400C90417 /* fit.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C23571D49F7E400C90417 /* fit.wav */; };
+		B15C235C1D49F7E400C90417 /* shrink.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C23581D49F7E400C90417 /* shrink.wav */; };
+		B15C23601D49FCF000C90417 /* color-blue-f.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C235D1D49FCF000C90417 /* color-blue-f.wav */; };
+		B15C23611D49FCF000C90417 /* color-green-f.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C235E1D49FCF000C90417 /* color-green-f.wav */; };
+		B15C23621D49FCF000C90417 /* color-pink-f.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C235F1D49FCF000C90417 /* color-pink-f.wav */; };
+		B15C23671D49FCFE00C90417 /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C23641D49FCFE00C90417 /* success.wav */; };
+		B15C23681D49FCFE00C90417 /* zoomin.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C23651D49FCFE00C90417 /* zoomin.wav */; };
 		B1934CEF1D2ABA7B00CDCEFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1934CEE1D2ABA7B00CDCEFC /* AppDelegate.swift */; };
 		B1934CF11D2ABA7B00CDCEFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1934CF01D2ABA7B00CDCEFC /* ViewController.swift */; };
 		B1934CF41D2ABA7B00CDCEFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1934CF21D2ABA7B00CDCEFC /* Main.storyboard */; };
 		B1934CF61D2ABA7B00CDCEFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1934CF51D2ABA7B00CDCEFC /* Assets.xcassets */; };
 		B1934CF91D2ABA7B00CDCEFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1934CF71D2ABA7B00CDCEFC /* LaunchScreen.storyboard */; };
+		B1E4BF681D3E26D3002B54FA /* GameStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E4BF671D3E26D3002B54FA /* GameStatsModel.swift */; };
+		B1E4BF6A1D3E27FF002B54FA /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E4BF691D3E27FF002B54FA /* BaseModel.swift */; };
 		B1F382CE1D2F8B0D000DB578 /* PuzzlePiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F382CD1D2F8B0D000DB578 /* PuzzlePiece.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		223BBFA8D374787A8E2F735D /* Pods-BabyPuzzle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyPuzzle.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabyPuzzle/Pods-BabyPuzzle.release.xcconfig"; sourceTree = "<group>"; };
+		6C99D91F963476BFAD3AB61E /* Pods-BabyPuzzle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyPuzzle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabyPuzzle/Pods-BabyPuzzle.debug.xcconfig"; sourceTree = "<group>"; };
+		B1520A0D1D4A2C9900F04C9B /* ImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		B15C234C1D49E04200C90417 /* AudioModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioModel.swift; sourceTree = "<group>"; };
+		B15C23551D49F7E400C90417 /* background.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = background.wav; sourceTree = "<group>"; };
+		B15C23561D49F7E400C90417 /* expand.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = expand.wav; sourceTree = "<group>"; };
+		B15C23571D49F7E400C90417 /* fit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fit.wav; sourceTree = "<group>"; };
+		B15C23581D49F7E400C90417 /* shrink.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shrink.wav; sourceTree = "<group>"; };
+		B15C235D1D49FCF000C90417 /* color-blue-f.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "color-blue-f.wav"; sourceTree = "<group>"; };
+		B15C235E1D49FCF000C90417 /* color-green-f.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "color-green-f.wav"; sourceTree = "<group>"; };
+		B15C235F1D49FCF000C90417 /* color-pink-f.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "color-pink-f.wav"; sourceTree = "<group>"; };
+		B15C23641D49FCFE00C90417 /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
+		B15C23651D49FCFE00C90417 /* zoomin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zoomin.wav; sourceTree = "<group>"; };
 		B1934CEB1D2ABA7B00CDCEFC /* BabyPuzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyPuzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1934CEE1D2ABA7B00CDCEFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1934CF01D2ABA7B00CDCEFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,7 +50,10 @@
 		B1934CF51D2ABA7B00CDCEFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1934CF81D2ABA7B00CDCEFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1934CFA1D2ABA7B00CDCEFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1E4BF671D3E26D3002B54FA /* GameStatsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsModel.swift; sourceTree = "<group>"; };
+		B1E4BF691D3E27FF002B54FA /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		B1F382CD1D2F8B0D000DB578 /* PuzzlePiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzlePiece.swift; sourceTree = "<group>"; };
+		E474BEC546997AC2AC4BE9DC /* Pods_BabyPuzzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyPuzzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +61,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57C0600088799A47BE131848 /* Pods_BabyPuzzle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FC0EBE375291905C56B1D5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E474BEC546997AC2AC4BE9DC /* Pods_BabyPuzzle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B15C234E1D49E56A00C90417 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				B15C23551D49F7E400C90417 /* background.wav */,
+				B15C235D1D49FCF000C90417 /* color-blue-f.wav */,
+				B15C235E1D49FCF000C90417 /* color-green-f.wav */,
+				B15C235F1D49FCF000C90417 /* color-pink-f.wav */,
+				B15C23561D49F7E400C90417 /* expand.wav */,
+				B15C23571D49F7E400C90417 /* fit.wav */,
+				B15C23581D49F7E400C90417 /* shrink.wav */,
+				B15C23641D49FCFE00C90417 /* success.wav */,
+				B15C23651D49FCFE00C90417 /* zoomin.wav */,
+			);
+			name = Sound;
+			sourceTree = "<group>";
+		};
 		B1934CE21D2ABA7B00CDCEFC = {
 			isa = PBXGroup;
 			children = (
 				B1934CED1D2ABA7B00CDCEFC /* BabyPuzzle */,
 				B1934CEC1D2ABA7B00CDCEFC /* Products */,
+				DA66E3056C12D2587DFBA1A1 /* Pods */,
+				3FC0EBE375291905C56B1D5B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +113,7 @@
 		B1934CED1D2ABA7B00CDCEFC /* BabyPuzzle */ = {
 			isa = PBXGroup;
 			children = (
+				B1E4BF661D3E26BC002B54FA /* Model */,
 				B1934D001D2ABC2A00CDCEFC /* App */,
 				B1934D011D2ABC4500CDCEFC /* View */,
 				B1934D031D2ABC6000CDCEFC /* Controller */,
@@ -67,6 +125,7 @@
 		B1934D001D2ABC2A00CDCEFC /* App */ = {
 			isa = PBXGroup;
 			children = (
+				B15C234E1D49E56A00C90417 /* Sound */,
 				B1934CF71D2ABA7B00CDCEFC /* LaunchScreen.storyboard */,
 				B1934CF51D2ABA7B00CDCEFC /* Assets.xcassets */,
 				B1934CEE1D2ABA7B00CDCEFC /* AppDelegate.swift */,
@@ -99,6 +158,26 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		B1E4BF661D3E26BC002B54FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B1E4BF671D3E26D3002B54FA /* GameStatsModel.swift */,
+				B1E4BF691D3E27FF002B54FA /* BaseModel.swift */,
+				B15C234C1D49E04200C90417 /* AudioModel.swift */,
+				B1520A0D1D4A2C9900F04C9B /* ImageModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DA66E3056C12D2587DFBA1A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C99D91F963476BFAD3AB61E /* Pods-BabyPuzzle.debug.xcconfig */,
+				223BBFA8D374787A8E2F735D /* Pods-BabyPuzzle.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1934CFD1D2ABA7B00CDCEFC /* Build configuration list for PBXNativeTarget "BabyPuzzle" */;
 			buildPhases = (
+				12390B7BE4E24DBA04A0A6C9 /* Check Pods Manifest.lock */,
 				B1934CE71D2ABA7B00CDCEFC /* Sources */,
 				B1934CE81D2ABA7B00CDCEFC /* Frameworks */,
 				B1934CE91D2ABA7B00CDCEFC /* Resources */,
+				A5AFC2305B20D1AA316A97F8 /* Embed Pods Frameworks */,
+				CE9686F153DD68FA0854F7DA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -157,13 +239,70 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B15C23681D49FCFE00C90417 /* zoomin.wav in Resources */,
+				B15C235B1D49F7E400C90417 /* fit.wav in Resources */,
 				B1934CF91D2ABA7B00CDCEFC /* LaunchScreen.storyboard in Resources */,
+				B15C235A1D49F7E400C90417 /* expand.wav in Resources */,
+				B15C23671D49FCFE00C90417 /* success.wav in Resources */,
+				B15C23621D49FCF000C90417 /* color-pink-f.wav in Resources */,
+				B15C23601D49FCF000C90417 /* color-blue-f.wav in Resources */,
+				B15C235C1D49F7E400C90417 /* shrink.wav in Resources */,
 				B1934CF61D2ABA7B00CDCEFC /* Assets.xcassets in Resources */,
+				B15C23591D49F7E400C90417 /* background.wav in Resources */,
 				B1934CF41D2ABA7B00CDCEFC /* Main.storyboard in Resources */,
+				B15C23611D49FCF000C90417 /* color-green-f.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12390B7BE4E24DBA04A0A6C9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A5AFC2305B20D1AA316A97F8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabyPuzzle/Pods-BabyPuzzle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE9686F153DD68FA0854F7DA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabyPuzzle/Pods-BabyPuzzle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B1934CE71D2ABA7B00CDCEFC /* Sources */ = {
@@ -171,8 +310,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1934CF11D2ABA7B00CDCEFC /* ViewController.swift in Sources */,
+				B1E4BF681D3E26D3002B54FA /* GameStatsModel.swift in Sources */,
+				B15C234D1D49E04200C90417 /* AudioModel.swift in Sources */,
 				B1934CEF1D2ABA7B00CDCEFC /* AppDelegate.swift in Sources */,
 				B1F382CE1D2F8B0D000DB578 /* PuzzlePiece.swift in Sources */,
+				B1E4BF6A1D3E27FF002B54FA /* BaseModel.swift in Sources */,
+				B1520A0E1D4A2C9900F04C9B /* ImageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +428,7 @@
 		};
 		B1934CFE1D2ABA7B00CDCEFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C99D91F963476BFAD3AB61E /* Pods-BabyPuzzle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BabyPuzzle/Info.plist;
@@ -296,6 +440,7 @@
 		};
 		B1934CFF1D2ABA7B00CDCEFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 223BBFA8D374787A8E2F735D /* Pods-BabyPuzzle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BabyPuzzle/Info.plist;
