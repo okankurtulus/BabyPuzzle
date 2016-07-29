@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57C0600088799A47BE131848 /* Pods_BabyPuzzle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E474BEC546997AC2AC4BE9DC /* Pods_BabyPuzzle.framework */; };
+		86A4B02C061A844219EAF8AF /* Pods_BabyPuzzle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A84564B1EF296DAD1EA84F /* Pods_BabyPuzzle.framework */; };
 		B1520A0E1D4A2C9900F04C9B /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1520A0D1D4A2C9900F04C9B /* ImageModel.swift */; };
 		B15C234D1D49E04200C90417 /* AudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15C234C1D49E04200C90417 /* AudioModel.swift */; };
 		B15C23591D49F7E400C90417 /* background.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C23551D49F7E400C90417 /* background.wav */; };
@@ -20,6 +20,8 @@
 		B15C23671D49FCFE00C90417 /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C23641D49FCFE00C90417 /* success.wav */; };
 		B15C23681D49FCFE00C90417 /* zoomin.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C23651D49FCFE00C90417 /* zoomin.wav */; };
 		B18372471D4B517D003ED35A /* applause.wav in Resources */ = {isa = PBXBuildFile; fileRef = B18372461D4B517D003ED35A /* applause.wav */; };
+		B18372491D4B6521003ED35A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B18372481D4B6521003ED35A /* GoogleService-Info.plist */; };
+		B183724B1D4B69C7003ED35A /* GoogleServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183724A1D4B69C7003ED35A /* GoogleServiceModel.swift */; };
 		B1934CEF1D2ABA7B00CDCEFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1934CEE1D2ABA7B00CDCEFC /* AppDelegate.swift */; };
 		B1934CF11D2ABA7B00CDCEFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1934CF01D2ABA7B00CDCEFC /* ViewController.swift */; };
 		B1934CF41D2ABA7B00CDCEFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1934CF21D2ABA7B00CDCEFC /* Main.storyboard */; };
@@ -31,8 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		223BBFA8D374787A8E2F735D /* Pods-BabyPuzzle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyPuzzle.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabyPuzzle/Pods-BabyPuzzle.release.xcconfig"; sourceTree = "<group>"; };
-		6C99D91F963476BFAD3AB61E /* Pods-BabyPuzzle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyPuzzle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabyPuzzle/Pods-BabyPuzzle.debug.xcconfig"; sourceTree = "<group>"; };
+		00B42B4E2B097C7BF3C345DB /* Pods-BabyPuzzle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyPuzzle.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabyPuzzle/Pods-BabyPuzzle.release.xcconfig"; sourceTree = "<group>"; };
+		53A84564B1EF296DAD1EA84F /* Pods_BabyPuzzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyPuzzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		629087C960996745E5D46979 /* Pods-BabyPuzzle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyPuzzle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabyPuzzle/Pods-BabyPuzzle.debug.xcconfig"; sourceTree = "<group>"; };
 		B1520A0D1D4A2C9900F04C9B /* ImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		B15C234C1D49E04200C90417 /* AudioModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioModel.swift; sourceTree = "<group>"; };
 		B15C23551D49F7E400C90417 /* background.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = background.wav; sourceTree = "<group>"; };
@@ -45,6 +48,9 @@
 		B15C23641D49FCFE00C90417 /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
 		B15C23651D49FCFE00C90417 /* zoomin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zoomin.wav; sourceTree = "<group>"; };
 		B18372461D4B517D003ED35A /* applause.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = applause.wav; sourceTree = "<group>"; };
+		B18372481D4B6521003ED35A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B183724A1D4B69C7003ED35A /* GoogleServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleServiceModel.swift; sourceTree = "<group>"; };
+		B183724C1D4B6E3C003ED35A /* BabyPuzzle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BabyPuzzle-Bridging-Header.h"; sourceTree = "<group>"; };
 		B1934CEB1D2ABA7B00CDCEFC /* BabyPuzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyPuzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1934CEE1D2ABA7B00CDCEFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1934CF01D2ABA7B00CDCEFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +61,6 @@
 		B1E4BF671D3E26D3002B54FA /* GameStatsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsModel.swift; sourceTree = "<group>"; };
 		B1E4BF691D3E27FF002B54FA /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		B1F382CD1D2F8B0D000DB578 /* PuzzlePiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzlePiece.swift; sourceTree = "<group>"; };
-		E474BEC546997AC2AC4BE9DC /* Pods_BabyPuzzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyPuzzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,19 +68,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57C0600088799A47BE131848 /* Pods_BabyPuzzle.framework in Frameworks */,
+				86A4B02C061A844219EAF8AF /* Pods_BabyPuzzle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3FC0EBE375291905C56B1D5B /* Frameworks */ = {
+		0BEFE0F3771D1D282AB51069 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E474BEC546997AC2AC4BE9DC /* Pods_BabyPuzzle.framework */,
+				629087C960996745E5D46979 /* Pods-BabyPuzzle.debug.xcconfig */,
+				00B42B4E2B097C7BF3C345DB /* Pods-BabyPuzzle.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		B15C234E1D49E56A00C90417 /* Sound */ = {
@@ -100,8 +106,8 @@
 			children = (
 				B1934CED1D2ABA7B00CDCEFC /* BabyPuzzle */,
 				B1934CEC1D2ABA7B00CDCEFC /* Products */,
-				DA66E3056C12D2587DFBA1A1 /* Pods */,
-				3FC0EBE375291905C56B1D5B /* Frameworks */,
+				0BEFE0F3771D1D282AB51069 /* Pods */,
+				C8CF996C7D55A7DD88FDCC3A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +127,7 @@
 				B1934D011D2ABC4500CDCEFC /* View */,
 				B1934D031D2ABC6000CDCEFC /* Controller */,
 				B1934CFA1D2ABA7B00CDCEFC /* Info.plist */,
+				B18372481D4B6521003ED35A /* GoogleService-Info.plist */,
 			);
 			path = BabyPuzzle;
 			sourceTree = "<group>";
@@ -132,6 +139,7 @@
 				B1934CF71D2ABA7B00CDCEFC /* LaunchScreen.storyboard */,
 				B1934CF51D2ABA7B00CDCEFC /* Assets.xcassets */,
 				B1934CEE1D2ABA7B00CDCEFC /* AppDelegate.swift */,
+				B183724C1D4B6E3C003ED35A /* BabyPuzzle-Bridging-Header.h */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -168,17 +176,17 @@
 				B1E4BF691D3E27FF002B54FA /* BaseModel.swift */,
 				B15C234C1D49E04200C90417 /* AudioModel.swift */,
 				B1520A0D1D4A2C9900F04C9B /* ImageModel.swift */,
+				B183724A1D4B69C7003ED35A /* GoogleServiceModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
 		};
-		DA66E3056C12D2587DFBA1A1 /* Pods */ = {
+		C8CF996C7D55A7DD88FDCC3A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6C99D91F963476BFAD3AB61E /* Pods-BabyPuzzle.debug.xcconfig */,
-				223BBFA8D374787A8E2F735D /* Pods-BabyPuzzle.release.xcconfig */,
+				53A84564B1EF296DAD1EA84F /* Pods_BabyPuzzle.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,12 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1934CFD1D2ABA7B00CDCEFC /* Build configuration list for PBXNativeTarget "BabyPuzzle" */;
 			buildPhases = (
-				12390B7BE4E24DBA04A0A6C9 /* Check Pods Manifest.lock */,
+				49EA2242FCA54606CBD55A52 /* 📦 Check Pods Manifest.lock */,
 				B1934CE71D2ABA7B00CDCEFC /* Sources */,
 				B1934CE81D2ABA7B00CDCEFC /* Frameworks */,
 				B1934CE91D2ABA7B00CDCEFC /* Resources */,
-				A5AFC2305B20D1AA316A97F8 /* Embed Pods Frameworks */,
-				CE9686F153DD68FA0854F7DA /* Copy Pods Resources */,
+				B812203EE4E729E2471B83C2 /* 📦 Embed Pods Frameworks */,
+				283E980B1FF9EF3575D57E03 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,6 +262,7 @@
 				B18372471D4B517D003ED35A /* applause.wav in Resources */,
 				B15C23591D49F7E400C90417 /* background.wav in Resources */,
 				B1934CF41D2ABA7B00CDCEFC /* Main.storyboard in Resources */,
+				B18372491D4B6521003ED35A /* GoogleService-Info.plist in Resources */,
 				B15C23611D49FCF000C90417 /* color-green-f.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,14 +270,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		12390B7BE4E24DBA04A0A6C9 /* Check Pods Manifest.lock */ = {
+		283E980B1FF9EF3575D57E03 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabyPuzzle/Pods-BabyPuzzle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49EA2242FCA54606CBD55A52 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,34 +300,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		A5AFC2305B20D1AA316A97F8 /* Embed Pods Frameworks */ = {
+		B812203EE4E729E2471B83C2 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabyPuzzle/Pods-BabyPuzzle-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CE9686F153DD68FA0854F7DA /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabyPuzzle/Pods-BabyPuzzle-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -315,6 +324,7 @@
 			files = (
 				B1934CF11D2ABA7B00CDCEFC /* ViewController.swift in Sources */,
 				B1E4BF681D3E26D3002B54FA /* GameStatsModel.swift in Sources */,
+				B183724B1D4B69C7003ED35A /* GoogleServiceModel.swift in Sources */,
 				B15C234D1D49E04200C90417 /* AudioModel.swift in Sources */,
 				B1934CEF1D2ABA7B00CDCEFC /* AppDelegate.swift in Sources */,
 				B1F382CE1D2F8B0D000DB578 /* PuzzlePiece.swift in Sources */,
@@ -432,25 +442,30 @@
 		};
 		B1934CFE1D2ABA7B00CDCEFC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C99D91F963476BFAD3AB61E /* Pods-BabyPuzzle.debug.xcconfig */;
+			baseConfigurationReference = 629087C960996745E5D46979 /* Pods-BabyPuzzle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BabyPuzzle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = okankurtulus.BabyPuzzle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.okn.babypuzzle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BabyPuzzle/BabyPuzzle-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B1934CFF1D2ABA7B00CDCEFC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 223BBFA8D374787A8E2F735D /* Pods-BabyPuzzle.release.xcconfig */;
+			baseConfigurationReference = 00B42B4E2B097C7BF3C345DB /* Pods-BabyPuzzle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BabyPuzzle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = okankurtulus.BabyPuzzle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.okn.babypuzzle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BabyPuzzle/BabyPuzzle-Bridging-Header.h";
 			};
 			name = Release;
 		};

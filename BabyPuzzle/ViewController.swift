@@ -7,14 +7,21 @@
 //
 
 import UIKit
-
+import GoogleMobileAds
+import Toucan
 
 class ViewController: UIViewController, PuzzlePieceDelegate {
     
+    @IBOutlet var resetButton : UIButton!
     @IBOutlet var puzzlePieceContainerView: UIView!
     @IBOutlet var separatorView: UIView!
     @IBOutlet var gameBackgroundImageView: UIImageView!
     @IBOutlet var leveLabel : UILabel!
+    
+    @IBOutlet var bannerView: GADBannerView!
+    @IBOutlet var bannerBottomConstraint : NSLayoutConstraint!
+    var interstitial: GADInterstitial!
+    var resetButtonPressedTime = 0
     
     var puzzlePieces : Array = [PuzzlePiece]()
     let colors = [UIColor.redColor(), UIColor.blueColor(),
@@ -26,10 +33,8 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.puzzlePieceContainerView.backgroundColor = UIColor.clearColor()
-        self.leveLabel.font = UIFont.systemFontOfSize(20, weight: 3)
-        self.leveLabel.textColor = UIColor.blueColor()
-        self.leveLabel.shadowOffset = CGSizeMake(2, 2)
-        self.leveLabel.shadowColor = UIColor.whiteColor()
+        initLevelLabel()
+        initInterstitial()
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +45,32 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         resetGameScene()
+    }
+    
+    func initLevelLabel() {
+        self.leveLabel.font = UIFont.systemFontOfSize(18, weight: 2)
+        self.leveLabel.textColor = UIColor.blueColor()
+        self.leveLabel.shadowOffset = CGSizeMake(1, 1)
+        self.leveLabel.shadowColor = UIColor.grayColor()
+        self.leveLabel.text = ""
+    }
+    
+    //MARK: - Google Ads
+    
+    func initBanner()  {
+        let bannerId = GoogleServiceModel.sharedInstance.read(GoogleServiceKey.AD_UNIT_ID_FOR_BANNER)
+        bannerView.adUnitID = bannerId
+        bannerView.rootViewController = self
+        bannerView.delegate = self
+        bannerView.loadRequest(GADRequest())        
+    }
+    
+    func initInterstitial() {
+        let interstitialId = GoogleServiceModel.sharedInstance.read(GoogleServiceKey.AD_UNIT_ID_FOR_INTERSTITIAL)
+        interstitial = GADInterstitial(adUnitID: interstitialId)
+        interstitial.delegate = self
+        let request = GADRequest()
+        interstitial.loadRequest(request)
     }
     
     //MARK: - GameScene
@@ -84,7 +115,6 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
             }
         }
         if(intersectionOccurs) {
-            print("Intersection occured")
             return nil
         } else {
             return originalFrame
@@ -93,10 +123,10 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
     
     func initGameScene(pieceCount : Int = 7) -> Void {
         puzzlePieces.removeAll()
+        self.resetButton.enabled = false
         self.gameBackgroundImageView.image = self.gameBackgroundImageView.image
         let level = gameStatsModel.gameOffset+gameStatsModel.gameLevel
         AudioModel.sharedInstance.backgroundAudio?.play()
-        self.leveLabel.text = ""
         
         let newImageName = self.backgroundImageNames[level%self.backgroundImageNames.count]
         UIView .transitionWithView(self.gameBackgroundImageView,
@@ -114,8 +144,14 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
                     self.addPiece(i, pieceCount: pieceCount, level: level)
                     })
             }
-            self.leveLabel.text = "LEVEL : \(level)"
+            self.leveLabel.text = "LEVEL \(level)"
             self.view.bringSubviewToFront(self.leveLabel)
+            
+            let resetButtonActivateTime = dispatch_time(DISPATCH_TIME_NOW, Int64( 1 * Double(NSEC_PER_SEC)))
+            dispatch_after(resetButtonActivateTime, dispatch_get_main_queue(), {
+                [unowned self] in
+                self.resetButton.enabled = true
+                })
         })
     }
     
@@ -141,14 +177,17 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
         let puzzlePiece = PuzzlePiece(frame: shelfFrame, correctPositionFrame: originalFrame,delegate: self)
         
         
-        let pieceBGImage = ImageModel.cropToBounds(self.gameBackgroundImageView,
+        var pieceBGImage = ImageModel.cropToBounds(self.gameBackgroundImageView,
                                                    rect: convertedFrame)
+        
+        //let triangle = UIImage(named: "mask_triangle")!
+        //pieceBGImage = Toucan(image: pieceBGImage).maskWithImage(maskImage: triangle).image
         
         placeHolderView.backgroundColor = UIColor.blackColor()
         placeHolderView.layer.cornerRadius = puzzlePiece.layer.cornerRadius + 2
         self.view.addSubview(placeHolderView)
         
-        puzzlePiece.backgroundColor = pieceColor;
+        puzzlePiece.backgroundColor = pieceColor
         puzzlePiece.contentMode = UIViewContentMode.ScaleToFill
         puzzlePiece.image = pieceBGImage
         puzzlePiece.placeHolderView = placeHolderView
@@ -169,9 +208,23 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
             puzzlePiece.remove()
         }        
         gameStatsModel.gameLevel += 1
+        
+        let bannerLevel = 3
+        if(gameStatsModel.gameLevel > bannerLevel
+            && self.bannerBottomConstraint.constant < 0) {
+            self.initBanner()
+        }
     }
     
-    @IBAction func resetGameScene() {
+    @IBAction func resetButtonPressed() {
+        resetButtonPressedTime += 1
+        if(resetButtonPressedTime % 2 == 0 && interstitial.isReady) {
+            interstitial.presentFromRootViewController(self)
+        }
+        resetGameScene()
+    }
+    
+    func resetGameScene() {
         for puzzlePiece in puzzlePieces {
             if(!puzzlePiece.isPointAcceptiable(puzzlePiece.frame.origin)
                 && (puzzlePiece.frame != puzzlePiece.frameShelfPosition)) {
@@ -182,7 +235,7 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
         
         self.reset()
         
-        var pieceCount : Int = Int(self.gameBackgroundImageView.frame.size.height / self.puzzlePieceContainerView.frame.size.height) - 1
+        var pieceCount : Int = Int(self.gameBackgroundImageView.frame.size.height / self.puzzlePieceContainerView.frame.size.height)
         pieceCount = min(pieceCount, gameStatsModel.gameLevel)
         self.initGameScene(pieceCount)
     }
@@ -195,7 +248,7 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
     func checkToResetGame() {
         for puzzlePiece in puzzlePieces {
             if(!puzzlePiece.isPointAcceptiable(puzzlePiece.frame.origin)) {
-                print("Some pieces are not in correct state yet")
+                print("Level is not completed yet")
                 return
             }
         }
@@ -206,7 +259,22 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
             [unowned self] in
             self.resetGameScene()
             })
-        
+    }
+}
+
+extension ViewController : GADBannerViewDelegate {
+    func adViewDidReceiveAd(bannerView: GADBannerView!) {
+       self.bannerBottomConstraint.constant = 0
+        print("adViewDidReceiveAd")
     }
     
+    func adView(bannerView: GADBannerView!, didFailToReceiveAdWithError error: GADRequestError!) {
+        print("error on loading ad..")
+    }
+}
+
+extension ViewController : GADInterstitialDelegate {
+    func interstitialDidDismissScreen(ad: GADInterstitial!) {
+        initInterstitial()
+    }
 }

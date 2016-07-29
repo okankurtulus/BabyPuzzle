@@ -65,9 +65,6 @@ extension PuzzlePiece {
         point.x -= frameCorrectPosition.width / 2
         point.y -= frameCorrectPosition.height / 2
         
-        point.x -= 75
-        point.y -= 75
-        
         if(!isPointAcceptiable(point)) {
             self.expand()
             self.superview?.bringSubviewToFront(self)
@@ -85,9 +82,6 @@ extension PuzzlePiece {
             var point = touch.locationInView(self.superview)
             point.x -= frameCorrectPosition.width / 2
             point.y -= frameCorrectPosition.height / 2
-            
-            point.x -= 75
-            point.y -= 75
             
             if(!isPointAcceptiable(point)) {
                 self.frame.origin = point
