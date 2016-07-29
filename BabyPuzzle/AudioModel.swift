@@ -17,6 +17,7 @@ class AudioModel: BaseModel {
     var backgroundAudio : AVAudioPlayer?
     var puzzlePieceFitAudio : AVAudioPlayer?
     var successAudio : AVAudioPlayer?
+    var applause : AVAudioPlayer?
     
     private override init() {
         super.init()
@@ -31,6 +32,7 @@ class AudioModel: BaseModel {
         puzzlePieceFitAudio = initAudioPlayer("fit", type: "wav")
         
         successAudio = initAudioPlayer("success", type: "wav")
+        applause = initAudioPlayer("applause", type: "wav")
     }
     
     private func initAudioPlayer(fileName : String, type : String) -> AVAudioPlayer? {

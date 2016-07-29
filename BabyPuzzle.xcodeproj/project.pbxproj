@@ -19,6 +19,7 @@
 		B15C23621D49FCF000C90417 /* color-pink-f.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C235F1D49FCF000C90417 /* color-pink-f.wav */; };
 		B15C23671D49FCFE00C90417 /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C23641D49FCFE00C90417 /* success.wav */; };
 		B15C23681D49FCFE00C90417 /* zoomin.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C23651D49FCFE00C90417 /* zoomin.wav */; };
+		B18372471D4B517D003ED35A /* applause.wav in Resources */ = {isa = PBXBuildFile; fileRef = B18372461D4B517D003ED35A /* applause.wav */; };
 		B1934CEF1D2ABA7B00CDCEFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1934CEE1D2ABA7B00CDCEFC /* AppDelegate.swift */; };
 		B1934CF11D2ABA7B00CDCEFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1934CF01D2ABA7B00CDCEFC /* ViewController.swift */; };
 		B1934CF41D2ABA7B00CDCEFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1934CF21D2ABA7B00CDCEFC /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		B15C235F1D49FCF000C90417 /* color-pink-f.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "color-pink-f.wav"; sourceTree = "<group>"; };
 		B15C23641D49FCFE00C90417 /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
 		B15C23651D49FCFE00C90417 /* zoomin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zoomin.wav; sourceTree = "<group>"; };
+		B18372461D4B517D003ED35A /* applause.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = applause.wav; sourceTree = "<group>"; };
 		B1934CEB1D2ABA7B00CDCEFC /* BabyPuzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyPuzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1934CEE1D2ABA7B00CDCEFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1934CF01D2ABA7B00CDCEFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		B15C234E1D49E56A00C90417 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				B18372461D4B517D003ED35A /* applause.wav */,
 				B15C23551D49F7E400C90417 /* background.wav */,
 				B15C235D1D49FCF000C90417 /* color-blue-f.wav */,
 				B15C235E1D49FCF000C90417 /* color-green-f.wav */,
@@ -248,6 +251,7 @@
 				B15C23601D49FCF000C90417 /* color-blue-f.wav in Resources */,
 				B15C235C1D49F7E400C90417 /* shrink.wav in Resources */,
 				B1934CF61D2ABA7B00CDCEFC /* Assets.xcassets in Resources */,
+				B18372471D4B517D003ED35A /* applause.wav in Resources */,
 				B15C23591D49F7E400C90417 /* background.wav in Resources */,
 				B1934CF41D2ABA7B00CDCEFC /* Main.storyboard in Resources */,
 				B15C23611D49FCF000C90417 /* color-green-f.wav in Resources */,

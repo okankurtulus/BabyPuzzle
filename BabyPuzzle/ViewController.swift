@@ -14,6 +14,7 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
     @IBOutlet var puzzlePieceContainerView: UIView!
     @IBOutlet var separatorView: UIView!
     @IBOutlet var gameBackgroundImageView: UIImageView!
+    @IBOutlet var leveLabel : UILabel!
     
     var puzzlePieces : Array = [PuzzlePiece]()
     let colors = [UIColor.redColor(), UIColor.blueColor(),
@@ -25,6 +26,10 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.puzzlePieceContainerView.backgroundColor = UIColor.clearColor()
+        self.leveLabel.font = UIFont.systemFontOfSize(20, weight: 3)
+        self.leveLabel.textColor = UIColor.blueColor()
+        self.leveLabel.shadowOffset = CGSizeMake(2, 2)
+        self.leveLabel.shadowColor = UIColor.whiteColor()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,8 +53,8 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
     func generateOriginalFrame(pieceCount : Int, contentFrame : CGRect) -> CGRect {
         let padding : CGFloat = 50
         let maxLimitForRandomFrame = min(contentFrame.size.width, contentFrame.size.height) / 2
-        let randomX = randomGenerate(contentFrame.origin.x, max: contentFrame.size.width - 1.5*padding)
-        let randomY = randomGenerate(contentFrame.origin.y, max: contentFrame.size.height - 1.5*padding)
+        let randomX = randomGenerate(contentFrame.origin.x, max: contentFrame.size.width - 2.5*padding)
+        let randomY = randomGenerate(contentFrame.origin.y, max: contentFrame.size.height - 2.5*padding)
         let randomHeight = randomGenerate(padding, max: min(contentFrame.height - randomY, maxLimitForRandomFrame))
         let randomWidth = randomGenerate(padding, max: min(contentFrame.width - randomX, maxLimitForRandomFrame))        
         let originalFrame = CGRectMake(randomX, randomY, randomWidth, randomHeight)
@@ -88,22 +93,32 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
     
     func initGameScene(pieceCount : Int = 7) -> Void {
         puzzlePieces.removeAll()
-        
-        //let randomIndex = Int(arc4random_uniform(UInt32(colors.count)))
-        
+        self.gameBackgroundImageView.image = self.gameBackgroundImageView.image
         let level = gameStatsModel.gameOffset+gameStatsModel.gameLevel
-        self.gameBackgroundImageView.image = UIImage(named: backgroundImageNames[level%backgroundImageNames.count])
-        
         AudioModel.sharedInstance.backgroundAudio?.play()
+        self.leveLabel.text = ""
         
-        for i in 1...pieceCount {
-            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(Double(i * 250) * Double(NSEC_PER_MSEC)))
-            dispatch_after(delayTime, dispatch_get_main_queue(), {
-                [unowned self] in
-                self.addPiece(i, pieceCount: pieceCount, level: level)
-            })
-        }
+        let newImageName = self.backgroundImageNames[level%self.backgroundImageNames.count]
+        UIView .transitionWithView(self.gameBackgroundImageView,
+                                   duration: 4,
+                                   options: UIViewAnimationOptions.TransitionCurlDown,
+        animations: {
+            [unowned self] in
+            self.gameBackgroundImageView.image = UIImage(named: newImageName)
+        }, completion: {[unowned self] (finished : Bool) -> () in
+            for i in 1...pieceCount {
+                let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(
+                    Double(i * 200) * Double(NSEC_PER_MSEC)))
+                dispatch_after(delayTime, dispatch_get_main_queue(), {
+                    [unowned self] in
+                    self.addPiece(i, pieceCount: pieceCount, level: level)
+                    })
+            }
+            self.leveLabel.text = "LEVEL : \(level)"
+            self.view.bringSubviewToFront(self.leveLabel)
+        })
     }
+    
     
     func addPiece(withIndex : Int, pieceCount : Int, level : Int) {
         let referenceFrame = self.puzzlePieceContainerView.frame
@@ -115,14 +130,14 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
         
         let padding : CGFloat = 5
         
-        let shelfFrame = CGRectMake(referenceFrame.origin.x, padding  + (heightStep * CGFloat(withIndex-1)), pieceWidth, pieceHeight)
+        let shelfFrame = CGRectMake(referenceFrame.origin.x, padding * CGFloat(withIndex) + (heightStep * CGFloat(withIndex-1)), pieceWidth, pieceHeight)
         
         let originalFrame = self.generateNonIntersectingFrame(pieceCount, contentFrame: contentFrame, previousPuzzlePieces: self.puzzlePieces)
         
         let pieceColor = colors[(level + withIndex)%colors.count]
         let convertedFrame = self.view.convertRect(originalFrame, toView: self.gameBackgroundImageView)
         
-        let placeHolderView = UIView(frame: convertedFrame)
+        let placeHolderView = UIView(frame: originalFrame)
         let puzzlePiece = PuzzlePiece(frame: shelfFrame, correctPositionFrame: originalFrame,delegate: self)
         
         
@@ -131,11 +146,12 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
         
         placeHolderView.backgroundColor = UIColor.blackColor()
         placeHolderView.layer.cornerRadius = puzzlePiece.layer.cornerRadius + 2
-        self.gameBackgroundImageView.addSubview(placeHolderView)
+        self.view.addSubview(placeHolderView)
         
         puzzlePiece.backgroundColor = pieceColor;
         puzzlePiece.contentMode = UIViewContentMode.ScaleToFill
         puzzlePiece.image = pieceBGImage
+        puzzlePiece.placeHolderView = placeHolderView
         
         self.puzzlePieces.append(puzzlePiece)
         self.view.addSubview(puzzlePiece)
@@ -148,14 +164,10 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
     //MARK: - ResetScene
     
     func reset() {
+        self.gameBackgroundImageView.setNeedsDisplay()
         for puzzlePiece in puzzlePieces {
-            puzzlePiece.removeFromSuperview()
-        }
-        
-        for view in self.gameBackgroundImageView.subviews {
-            view.removeFromSuperview()
-        }
-        
+            puzzlePiece.remove()
+        }        
         gameStatsModel.gameLevel += 1
     }
     
@@ -168,20 +180,15 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
             }
         }
         
-        reset()
-        let pieceCount = self.gameBackgroundImageView.frame.size.height / self.puzzlePieceContainerView.frame.size.height
+        self.reset()
         
-        self.initGameScene(Int(pieceCount))
+        var pieceCount : Int = Int(self.gameBackgroundImageView.frame.size.height / self.puzzlePieceContainerView.frame.size.height) - 1
+        pieceCount = min(pieceCount, gameStatsModel.gameLevel)
+        self.initGameScene(pieceCount)
     }
     
     //Mark: - PuzzlePieceDelegate
     func fitInCorrectPlace(puzzlePiece : PuzzlePiece) {
-        let convertedFrame = self.view.convertRect(puzzlePiece.frameCorrectPosition, toView: self.gameBackgroundImageView)
-        for view in self.gameBackgroundImageView.subviews {
-            if(view.frame == convertedFrame) {
-                view.removeFromSuperview()
-            }
-        }
         checkToResetGame()
     }
     
@@ -192,8 +199,14 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
                 return
             }
         }
-        resetGameScene()
+        AudioModel.sharedInstance.applause?.play()
+        
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
+        dispatch_after(delayTime, dispatch_get_main_queue(), {
+            [unowned self] in
+            self.resetGameScene()
+            })
+        
     }
     
 }
-

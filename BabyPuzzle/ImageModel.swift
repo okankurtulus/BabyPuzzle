@@ -13,7 +13,6 @@ class ImageModel: BaseModel {
     
     static func cropToBounds(imageView: UIImageView, rect: CGRect) -> UIImage {
         let image : UIImage = imageView.image!
-        print("imageSize H: \(image.size.height),W: \(image.size.width)")
         
         let xMultiplier = image.size.width / imageView.frame.size.width
         let yMultiplier = image.size.height / imageView.frame.size.height

@@ -52,6 +52,16 @@
                                     <action selector="resetGameScene" destination="BYZ-38-t0r" eventType="touchUpInside" id="mLF-GU-eSX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgT-P4-4bE">
+                                <rect key="frame" x="75" y="8" width="150" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="5b1-oG-dvH"/>
+                                    <constraint firstAttribute="width" constant="150" id="xsV-r2-cVk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -61,6 +71,7 @@
                             <constraint firstItem="7VH-yy-a8n" firstAttribute="top" secondItem="byP-MF-EqV" secondAttribute="top" constant="8" id="Duo-YP-L91"/>
                             <constraint firstItem="7VH-yy-a8n" firstAttribute="leading" secondItem="byP-MF-EqV" secondAttribute="leading" constant="8" id="E0Z-aD-B5e"/>
                             <constraint firstItem="o99-Ph-nl3" firstAttribute="leading" secondItem="soi-2o-Td3" secondAttribute="trailing" id="EGu-1u-kvh"/>
+                            <constraint firstItem="QgT-P4-4bE" firstAttribute="leading" secondItem="17F-j4-Bs5" secondAttribute="trailing" constant="8" id="Elw-m4-whY"/>
                             <constraint firstItem="o99-Ph-nl3" firstAttribute="top" secondItem="byP-MF-EqV" secondAttribute="top" id="Kbm-q1-g7R"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="o99-Ph-nl3" secondAttribute="bottom" id="Ose-xH-8Zi"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7VH-yy-a8n" secondAttribute="bottom" constant="8" id="SGs-iG-Sly"/>
@@ -68,6 +79,7 @@
                             <constraint firstItem="soi-2o-Td3" firstAttribute="top" secondItem="byP-MF-EqV" secondAttribute="topMargin" id="aWR-rP-AmY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kar-VN-29c" secondAttribute="trailing" constant="-20" id="bjt-iF-k7Z"/>
                             <constraint firstItem="soi-2o-Td3" firstAttribute="leading" secondItem="byP-MF-EqV" secondAttribute="leadingMargin" id="gph-0G-clD"/>
+                            <constraint firstItem="QgT-P4-4bE" firstAttribute="top" secondItem="byP-MF-EqV" secondAttribute="topMargin" constant="8" id="h4K-By-gOW"/>
                             <constraint firstItem="kar-VN-29c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="iwf-8Q-I4e"/>
                             <constraint firstItem="17F-j4-Bs5" firstAttribute="leading" secondItem="byP-MF-EqV" secondAttribute="leading" constant="66" id="pyF-jG-eAJ"/>
                             <constraint firstAttribute="bottom" secondItem="17F-j4-Bs5" secondAttribute="bottom" id="t3V-Fk-fZZ"/>
@@ -87,6 +99,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="gameBackgroundImageView" destination="o99-Ph-nl3" id="ln5-hP-YMY"/>
+                        <outlet property="leveLabel" destination="QgT-P4-4bE" id="acu-2s-pID"/>
                         <outlet property="puzzlePieceContainerView" destination="7VH-yy-a8n" id="CeB-wO-Rn9"/>
                         <outlet property="separatorView" destination="17F-j4-Bs5" id="4sd-Kb-WDt"/>
                     </connections>

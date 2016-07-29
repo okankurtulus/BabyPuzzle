@@ -19,6 +19,7 @@ class PuzzlePiece: UIImageView {
     var frameCorrectPosition : CGRect = CGRectZero
     var frameShelfPosition : CGRect = CGRectZero
     var delegate : PuzzlePieceDelegate?
+    var placeHolderView : UIView?    
     
     //MARK: - Init
     required init(coder aDecoder: NSCoder) {
@@ -60,7 +61,13 @@ class PuzzlePiece: UIImageView {
 
 extension PuzzlePiece {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let point = touches.first!.locationInView(self.superview)
+        var point = touches.first!.locationInView(self.superview)
+        point.x -= frameCorrectPosition.width / 2
+        point.y -= frameCorrectPosition.height / 2
+        
+        point.x -= 75
+        point.y -= 75
+        
         if(!isPointAcceptiable(point)) {
             self.expand()
             self.superview?.bringSubviewToFront(self)
@@ -79,6 +86,8 @@ extension PuzzlePiece {
             point.x -= frameCorrectPosition.width / 2
             point.y -= frameCorrectPosition.height / 2
             
+            point.x -= 75
+            point.y -= 75
             
             if(!isPointAcceptiable(point)) {
                 self.frame.origin = point
@@ -92,7 +101,7 @@ extension PuzzlePiece {
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let point = touches.first!.locationInView(self.superview)
         if(self.frame == frameCorrectPosition) {
-            self.removeFromSuperview()
+            self.remove()
             AudioModel.sharedInstance.successAudio?.play()
             self.delegate?.fitInCorrectPlace(self)
         } else if(isPointAcceptiable(point)) {
@@ -101,6 +110,11 @@ extension PuzzlePiece {
             AudioModel.sharedInstance.shrinkAudio?.play()
             shrink()
         }
+    }
+    
+    func remove() {
+        self.placeHolderView?.removeFromSuperview()
+        self.removeFromSuperview()
     }
 }
 

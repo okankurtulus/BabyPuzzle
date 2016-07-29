@@ -16,10 +16,10 @@ class GameStatsModel: BaseModel {
     //private init() {} //This prevents others from using the default '()' initializer for this class.
     
     var gameOffset = 0
-    var gameLevel = 1
+    var gameLevel = 0
     
     override private init() {
-        gameOffset = Int(arc4random_uniform(UInt32(1000)))
+        //gameOffset = Int(arc4random_uniform(UInt32(1000)))
     }
     
 }
