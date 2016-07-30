@@ -64,7 +64,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QgT-P4-4bE">
-                                <rect key="frame" x="0.0" y="394" width="80" height="20"/>
+                                <rect key="frame" x="5" y="394" width="70" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="JIh-rr-3Jo"/>
                                 </constraints>
@@ -81,7 +81,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QgT-P4-4bE" secondAttribute="bottom" id="Clv-5W-5F9"/>
                             <constraint firstItem="7VH-yy-a8n" firstAttribute="top" secondItem="byP-MF-EqV" secondAttribute="top" constant="8" id="Duo-YP-L91"/>
                             <constraint firstItem="7VH-yy-a8n" firstAttribute="leading" secondItem="byP-MF-EqV" secondAttribute="leading" constant="8" id="E0Z-aD-B5e"/>
-                            <constraint firstItem="QgT-P4-4bE" firstAttribute="leading" secondItem="byP-MF-EqV" secondAttribute="leading" id="GYD-W5-BiA"/>
+                            <constraint firstItem="QgT-P4-4bE" firstAttribute="leading" secondItem="byP-MF-EqV" secondAttribute="leading" constant="5" id="GYD-W5-BiA"/>
                             <constraint firstItem="o99-Ph-nl3" firstAttribute="top" secondItem="byP-MF-EqV" secondAttribute="top" id="Kbm-q1-g7R"/>
                             <constraint firstItem="17F-j4-Bs5" firstAttribute="top" secondItem="byP-MF-EqV" secondAttribute="topMargin" id="R6q-sK-x8w"/>
                             <constraint firstItem="o99-Ph-nl3" firstAttribute="leading" secondItem="17F-j4-Bs5" secondAttribute="trailing" id="VOL-9G-Cyg"/>
@@ -94,7 +94,7 @@
                             <constraint firstAttribute="trailing" secondItem="kqw-a6-Isa" secondAttribute="trailing" id="miY-Id-5SQ"/>
                             <constraint firstItem="soi-2o-Td3" firstAttribute="leading" secondItem="byP-MF-EqV" secondAttribute="leading" id="o0O-jl-Jit"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kqw-a6-Isa" secondAttribute="bottom" constant="-60" id="oDa-hO-Shr"/>
-                            <constraint firstItem="17F-j4-Bs5" firstAttribute="leading" secondItem="QgT-P4-4bE" secondAttribute="trailing" id="tyu-S6-d0s"/>
+                            <constraint firstItem="17F-j4-Bs5" firstAttribute="leading" secondItem="QgT-P4-4bE" secondAttribute="trailing" constant="5" id="tyu-S6-d0s"/>
                             <constraint firstAttribute="trailing" secondItem="o99-Ph-nl3" secondAttribute="trailing" id="zuM-1M-Fq4"/>
                         </constraints>
                     </view>

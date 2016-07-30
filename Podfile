@@ -6,6 +6,8 @@ use_frameworks!
 target 'BabyPuzzle' do
 
 pod 'Toucan', '~> 0.5'
+pod 'Firebase'
+pod 'Firebase/AdMob'
 
 end
 

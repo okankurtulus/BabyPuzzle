@@ -29,7 +29,6 @@ class PuzzlePiece: UIImageView {
     
     init(frame: CGRect, correctPositionFrame: CGRect, delegate : PuzzlePieceDelegate) {
         super.init(frame: correctPositionFrame)
-        self.layer.cornerRadius = 10
         self.clipsToBounds = true
         self.userInteractionEnabled = true
         frameShelfPosition = frame

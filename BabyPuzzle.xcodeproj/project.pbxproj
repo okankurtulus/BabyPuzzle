@@ -8,18 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		86A4B02C061A844219EAF8AF /* Pods_BabyPuzzle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A84564B1EF296DAD1EA84F /* Pods_BabyPuzzle.framework */; };
+		B12763901D4C832B006291D8 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B127638F1D4C832B006291D8 /* background.mp3 */; };
+		B12763941D4C833D006291D8 /* applause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B12763911D4C833D006291D8 /* applause.mp3 */; };
+		B12763951D4C833D006291D8 /* expand.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B12763921D4C833D006291D8 /* expand.mp3 */; };
+		B12763961D4C833D006291D8 /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B12763931D4C833D006291D8 /* success.mp3 */; };
+		B12763981D4C8824006291D8 /* fit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B12763971D4C8824006291D8 /* fit.mp3 */; };
+		B127639A1D4C889E006291D8 /* shrink.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B12763991D4C889E006291D8 /* shrink.mp3 */; };
+		B127639C1D4C9CEB006291D8 /* AssetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B127639B1D4C9CEB006291D8 /* AssetModel.swift */; };
 		B1520A0E1D4A2C9900F04C9B /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1520A0D1D4A2C9900F04C9B /* ImageModel.swift */; };
 		B15C234D1D49E04200C90417 /* AudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15C234C1D49E04200C90417 /* AudioModel.swift */; };
-		B15C23591D49F7E400C90417 /* background.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C23551D49F7E400C90417 /* background.wav */; };
-		B15C235A1D49F7E400C90417 /* expand.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C23561D49F7E400C90417 /* expand.wav */; };
-		B15C235B1D49F7E400C90417 /* fit.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C23571D49F7E400C90417 /* fit.wav */; };
-		B15C235C1D49F7E400C90417 /* shrink.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C23581D49F7E400C90417 /* shrink.wav */; };
-		B15C23601D49FCF000C90417 /* color-blue-f.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C235D1D49FCF000C90417 /* color-blue-f.wav */; };
-		B15C23611D49FCF000C90417 /* color-green-f.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C235E1D49FCF000C90417 /* color-green-f.wav */; };
-		B15C23621D49FCF000C90417 /* color-pink-f.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C235F1D49FCF000C90417 /* color-pink-f.wav */; };
-		B15C23671D49FCFE00C90417 /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C23641D49FCFE00C90417 /* success.wav */; };
-		B15C23681D49FCFE00C90417 /* zoomin.wav in Resources */ = {isa = PBXBuildFile; fileRef = B15C23651D49FCFE00C90417 /* zoomin.wav */; };
-		B18372471D4B517D003ED35A /* applause.wav in Resources */ = {isa = PBXBuildFile; fileRef = B18372461D4B517D003ED35A /* applause.wav */; };
 		B18372491D4B6521003ED35A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B18372481D4B6521003ED35A /* GoogleService-Info.plist */; };
 		B183724B1D4B69C7003ED35A /* GoogleServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183724A1D4B69C7003ED35A /* GoogleServiceModel.swift */; };
 		B1934CEF1D2ABA7B00CDCEFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1934CEE1D2ABA7B00CDCEFC /* AppDelegate.swift */; };
@@ -36,18 +33,15 @@
 		00B42B4E2B097C7BF3C345DB /* Pods-BabyPuzzle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyPuzzle.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabyPuzzle/Pods-BabyPuzzle.release.xcconfig"; sourceTree = "<group>"; };
 		53A84564B1EF296DAD1EA84F /* Pods_BabyPuzzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyPuzzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		629087C960996745E5D46979 /* Pods-BabyPuzzle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyPuzzle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabyPuzzle/Pods-BabyPuzzle.debug.xcconfig"; sourceTree = "<group>"; };
+		B127638F1D4C832B006291D8 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
+		B12763911D4C833D006291D8 /* applause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = applause.mp3; sourceTree = "<group>"; };
+		B12763921D4C833D006291D8 /* expand.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = expand.mp3; sourceTree = "<group>"; };
+		B12763931D4C833D006291D8 /* success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = success.mp3; sourceTree = "<group>"; };
+		B12763971D4C8824006291D8 /* fit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fit.mp3; sourceTree = "<group>"; };
+		B12763991D4C889E006291D8 /* shrink.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shrink.mp3; sourceTree = "<group>"; };
+		B127639B1D4C9CEB006291D8 /* AssetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetModel.swift; sourceTree = "<group>"; };
 		B1520A0D1D4A2C9900F04C9B /* ImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		B15C234C1D49E04200C90417 /* AudioModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioModel.swift; sourceTree = "<group>"; };
-		B15C23551D49F7E400C90417 /* background.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = background.wav; sourceTree = "<group>"; };
-		B15C23561D49F7E400C90417 /* expand.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = expand.wav; sourceTree = "<group>"; };
-		B15C23571D49F7E400C90417 /* fit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fit.wav; sourceTree = "<group>"; };
-		B15C23581D49F7E400C90417 /* shrink.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shrink.wav; sourceTree = "<group>"; };
-		B15C235D1D49FCF000C90417 /* color-blue-f.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "color-blue-f.wav"; sourceTree = "<group>"; };
-		B15C235E1D49FCF000C90417 /* color-green-f.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "color-green-f.wav"; sourceTree = "<group>"; };
-		B15C235F1D49FCF000C90417 /* color-pink-f.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "color-pink-f.wav"; sourceTree = "<group>"; };
-		B15C23641D49FCFE00C90417 /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
-		B15C23651D49FCFE00C90417 /* zoomin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zoomin.wav; sourceTree = "<group>"; };
-		B18372461D4B517D003ED35A /* applause.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = applause.wav; sourceTree = "<group>"; };
 		B18372481D4B6521003ED35A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B183724A1D4B69C7003ED35A /* GoogleServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleServiceModel.swift; sourceTree = "<group>"; };
 		B183724C1D4B6E3C003ED35A /* BabyPuzzle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BabyPuzzle-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -87,16 +81,12 @@
 		B15C234E1D49E56A00C90417 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
-				B18372461D4B517D003ED35A /* applause.wav */,
-				B15C23551D49F7E400C90417 /* background.wav */,
-				B15C235D1D49FCF000C90417 /* color-blue-f.wav */,
-				B15C235E1D49FCF000C90417 /* color-green-f.wav */,
-				B15C235F1D49FCF000C90417 /* color-pink-f.wav */,
-				B15C23561D49F7E400C90417 /* expand.wav */,
-				B15C23571D49F7E400C90417 /* fit.wav */,
-				B15C23581D49F7E400C90417 /* shrink.wav */,
-				B15C23641D49FCFE00C90417 /* success.wav */,
-				B15C23651D49FCFE00C90417 /* zoomin.wav */,
+				B12763991D4C889E006291D8 /* shrink.mp3 */,
+				B12763971D4C8824006291D8 /* fit.mp3 */,
+				B12763911D4C833D006291D8 /* applause.mp3 */,
+				B127638F1D4C832B006291D8 /* background.mp3 */,
+				B12763921D4C833D006291D8 /* expand.mp3 */,
+				B12763931D4C833D006291D8 /* success.mp3 */,
 			);
 			name = Sound;
 			sourceTree = "<group>";
@@ -177,6 +167,7 @@
 				B15C234C1D49E04200C90417 /* AudioModel.swift */,
 				B1520A0D1D4A2C9900F04C9B /* ImageModel.swift */,
 				B183724A1D4B69C7003ED35A /* GoogleServiceModel.swift */,
+				B127639B1D4C9CEB006291D8 /* AssetModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -250,20 +241,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B15C23681D49FCFE00C90417 /* zoomin.wav in Resources */,
-				B15C235B1D49F7E400C90417 /* fit.wav in Resources */,
+				B12763941D4C833D006291D8 /* applause.mp3 in Resources */,
 				B1934CF91D2ABA7B00CDCEFC /* LaunchScreen.storyboard in Resources */,
-				B15C235A1D49F7E400C90417 /* expand.wav in Resources */,
-				B15C23671D49FCFE00C90417 /* success.wav in Resources */,
-				B15C23621D49FCF000C90417 /* color-pink-f.wav in Resources */,
-				B15C23601D49FCF000C90417 /* color-blue-f.wav in Resources */,
-				B15C235C1D49F7E400C90417 /* shrink.wav in Resources */,
+				B127639A1D4C889E006291D8 /* shrink.mp3 in Resources */,
+				B12763961D4C833D006291D8 /* success.mp3 in Resources */,
+				B12763901D4C832B006291D8 /* background.mp3 in Resources */,
+				B12763951D4C833D006291D8 /* expand.mp3 in Resources */,
 				B1934CF61D2ABA7B00CDCEFC /* Assets.xcassets in Resources */,
-				B18372471D4B517D003ED35A /* applause.wav in Resources */,
-				B15C23591D49F7E400C90417 /* background.wav in Resources */,
+				B12763981D4C8824006291D8 /* fit.mp3 in Resources */,
 				B1934CF41D2ABA7B00CDCEFC /* Main.storyboard in Resources */,
 				B18372491D4B6521003ED35A /* GoogleService-Info.plist in Resources */,
-				B15C23611D49FCF000C90417 /* color-green-f.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +314,7 @@
 				B183724B1D4B69C7003ED35A /* GoogleServiceModel.swift in Sources */,
 				B15C234D1D49E04200C90417 /* AudioModel.swift in Sources */,
 				B1934CEF1D2ABA7B00CDCEFC /* AppDelegate.swift in Sources */,
+				B127639C1D4C9CEB006291D8 /* AssetModel.swift in Sources */,
 				B1F382CE1D2F8B0D000DB578 /* PuzzlePiece.swift in Sources */,
 				B1E4BF6A1D3E27FF002B54FA /* BaseModel.swift in Sources */,
 				B1520A0E1D4A2C9900F04C9B /* ImageModel.swift in Sources */,
@@ -448,6 +436,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BabyPuzzle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "\"-D\" \"COCOAPODS\" -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.okn.babypuzzle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BabyPuzzle/BabyPuzzle-Bridging-Header.h";

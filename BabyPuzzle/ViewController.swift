@@ -10,6 +10,20 @@ import UIKit
 import GoogleMobileAds
 import Toucan
 
+//MARK - ByPass Print for Prod
+func print(items: Any..., separator: String = " ", terminator: String = "\n") {
+    #if DEBUG
+        var idx = items.startIndex
+        let endIdx = items.endIndex
+        
+        repeat {
+            Swift.print(items[idx], separator: separator, terminator: idx == (endIdx - 1) ? terminator : separator)
+            idx += 1
+        }
+            while idx < endIdx
+    #endif
+}
+
 class ViewController: UIViewController, PuzzlePieceDelegate {
     
     @IBOutlet var resetButton : UIButton!
@@ -20,21 +34,19 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
     
     @IBOutlet var bannerView: GADBannerView!
     @IBOutlet var bannerBottomConstraint : NSLayoutConstraint!
+    var isBannerBottomInited : Bool = false
     var interstitial: GADInterstitial!
     var resetButtonPressedTime = 0
     
     var puzzlePieces : Array = [PuzzlePiece]()
-    let colors = [UIColor.redColor(), UIColor.blueColor(),
-                  UIColor.yellowColor(), UIColor.greenColor(),
-                  UIColor.cyanColor(), UIColor.orangeColor(), UIColor.purpleColor()]
-    var backgroundImageNames = ["bg1","bg2","bg3","bg4","bg5","bg6","bg7","bg8","bg9","bg10","bg11","bg12"]
+    
     let gameStatsModel = GameStatsModel.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.puzzlePieceContainerView.backgroundColor = UIColor.clearColor()
+        isBannerBottomInited = false
         initLevelLabel()
-        initInterstitial()
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,7 +70,12 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
     //MARK: - Google Ads
     
     func initBanner()  {
-        let bannerId = GoogleServiceModel.sharedInstance.read(GoogleServiceKey.AD_UNIT_ID_FOR_BANNER)
+        #if DEBUG
+            let bannerId = GoogleServiceModel.sharedInstance.read(GoogleServiceKey.AD_UNIT_ID_FOR_BANNER_TEST)
+        #else
+            let bannerId = GoogleServiceModel.sharedInstance.read(GoogleServiceKey.AD_UNIT_ID_FOR_BANNER)
+        #endif
+        
         bannerView.adUnitID = bannerId
         bannerView.rootViewController = self
         bannerView.delegate = self
@@ -66,7 +83,11 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
     }
     
     func initInterstitial() {
-        let interstitialId = GoogleServiceModel.sharedInstance.read(GoogleServiceKey.AD_UNIT_ID_FOR_INTERSTITIAL)
+        #if DEBUG
+            let interstitialId = GoogleServiceModel.sharedInstance.read(GoogleServiceKey.AD_UNIT_ID_FOR_INTERSTITIAL_TEST)
+        #else
+            let interstitialId = GoogleServiceModel.sharedInstance.read(GoogleServiceKey.AD_UNIT_ID_FOR_INTERSTITIAL)
+        #endif
         interstitial = GADInterstitial(adUnitID: interstitialId)
         interstitial.delegate = self
         let request = GADRequest()
@@ -76,6 +97,10 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
     //MARK: - GameScene
     
     func randomGenerate(min : CGFloat, max : CGFloat) -> CGFloat {
+        if(max <= min) {
+            return min
+        }
+        
         let diff = UInt32(max-min)
         let randomValue = (arc4random_uniform(diff) + UInt32(min))
         return CGFloat(randomValue)
@@ -86,8 +111,10 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
         let maxLimitForRandomFrame = min(contentFrame.size.width, contentFrame.size.height) / 2
         let randomX = randomGenerate(contentFrame.origin.x, max: contentFrame.size.width - 2.5*padding)
         let randomY = randomGenerate(contentFrame.origin.y, max: contentFrame.size.height - 2.5*padding)
-        let randomHeight = randomGenerate(padding, max: min(contentFrame.height - randomY, maxLimitForRandomFrame))
-        let randomWidth = randomGenerate(padding, max: min(contentFrame.width - randomX, maxLimitForRandomFrame))        
+        
+        let minWidth = self.puzzlePieceContainerView.frame.size.width
+        let randomHeight = randomGenerate(minWidth, max: min(contentFrame.height - randomY, maxLimitForRandomFrame))
+        let randomWidth = randomGenerate(minWidth, max: min(contentFrame.width - randomX, maxLimitForRandomFrame))
         let originalFrame = CGRectMake(randomX, randomY, randomWidth, randomHeight)
         return originalFrame
     }
@@ -128,7 +155,7 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
         let level = gameStatsModel.gameOffset+gameStatsModel.gameLevel
         AudioModel.sharedInstance.backgroundAudio?.play()
         
-        let newImageName = self.backgroundImageNames[level%self.backgroundImageNames.count]
+        let newImageName = BackgroundImageModel.names[level-1 % BackgroundImageModel.names.count]
         UIView .transitionWithView(self.gameBackgroundImageView,
                                    duration: 4,
                                    options: UIViewAnimationOptions.TransitionCurlDown,
@@ -170,24 +197,29 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
         
         let originalFrame = self.generateNonIntersectingFrame(pieceCount, contentFrame: contentFrame, previousPuzzlePieces: self.puzzlePieces)
         
-        let pieceColor = colors[(level + withIndex)%colors.count]
         let convertedFrame = self.view.convertRect(originalFrame, toView: self.gameBackgroundImageView)
         
-        let placeHolderView = UIView(frame: originalFrame)
+        let placeHolderView = UIImageView(frame: originalFrame)
         let puzzlePiece = PuzzlePiece(frame: shelfFrame, correctPositionFrame: originalFrame,delegate: self)
         
         
+        let maskIndex = ((level / 3) + (withIndex-1)) % MaskImageModel.names.count
+        let maskImageName = MaskImageModel.names[maskIndex]
+        let mask = UIImage(named: maskImageName)!
+        
         var pieceBGImage = ImageModel.cropToBounds(self.gameBackgroundImageView,
                                                    rect: convertedFrame)
+        pieceBGImage = Toucan(image: pieceBGImage).maskWithImage(maskImage: mask).image
+        var placeHolderBg = UIImage(named: "black")!
+        placeHolderBg = Toucan(image: placeHolderBg).maskWithImage(maskImage: mask).image        
         
-        //let triangle = UIImage(named: "mask_triangle")!
-        //pieceBGImage = Toucan(image: pieceBGImage).maskWithImage(maskImage: triangle).image
-        
-        placeHolderView.backgroundColor = UIColor.blackColor()
-        placeHolderView.layer.cornerRadius = puzzlePiece.layer.cornerRadius + 2
+        placeHolderView.image = placeHolderBg
+        placeHolderView.backgroundColor = UIColor.clearColor()
+        placeHolderView.contentMode = UIViewContentMode.ScaleToFill
+        placeHolderView.clipsToBounds = true
         self.view.addSubview(placeHolderView)
         
-        puzzlePiece.backgroundColor = pieceColor
+        puzzlePiece.backgroundColor = UIColor.clearColor()
         puzzlePiece.contentMode = UIViewContentMode.ScaleToFill
         puzzlePiece.image = pieceBGImage
         puzzlePiece.placeHolderView = placeHolderView
@@ -207,21 +239,30 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
         for puzzlePiece in puzzlePieces {
             puzzlePiece.remove()
         }        
-        gameStatsModel.gameLevel += 1
+        gameStatsModel.nexLevel()
         
-        let bannerLevel = 3
+        let bannerLevel = 1
         if(gameStatsModel.gameLevel > bannerLevel
-            && self.bannerBottomConstraint.constant < 0) {
+            && self.bannerBottomConstraint.constant < 0
+            && !isBannerBottomInited) {
             self.initBanner()
+        } else if (isBannerBottomInited) {
+            self.bannerBottomConstraint.constant = 0
         }
+        
+        if(interstitial == nil || !interstitial.isReady) {
+            self.initInterstitial()
+        }
+        
     }
     
     @IBAction func resetButtonPressed() {
         resetButtonPressedTime += 1
         if(resetButtonPressedTime % 2 == 0 && interstitial.isReady) {
             interstitial.presentFromRootViewController(self)
+        } else {
+            resetGameScene()
         }
-        resetGameScene()
     }
     
     func resetGameScene() {
@@ -262,19 +303,41 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
     }
 }
 
+//MARK: - Banner Ad delegate
 extension ViewController : GADBannerViewDelegate {
     func adViewDidReceiveAd(bannerView: GADBannerView!) {
-       self.bannerBottomConstraint.constant = 0
-        print("adViewDidReceiveAd")
-    }
-    
-    func adView(bannerView: GADBannerView!, didFailToReceiveAdWithError error: GADRequestError!) {
-        print("error on loading ad..")
+        isBannerBottomInited = true
     }
 }
 
+//MARK: - Interstitial Ad delegate
 extension ViewController : GADInterstitialDelegate {
+    
+    func interstitialWillPresentScreen(ad: GADInterstitial!) {
+        AudioModel.sharedInstance.backgroundAudio?.stop()
+    }
+    
     func interstitialDidDismissScreen(ad: GADInterstitial!) {
+        AudioModel.sharedInstance.backgroundAudio?.play()
         initInterstitial()
+    }
+    
+    func interstitialDidFailToPresentScreen(ad: GADInterstitial!) {
+        AudioModel.sharedInstance.backgroundAudio?.play()
+    }
+    
+}
+
+public extension UIImage {
+    public convenience init?(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
+        let rect = CGRect(origin: .zero, size: size)
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
+        color.setFill()
+        UIRectFill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        guard let cgImage = image.CGImage else { return nil }
+        self.init(CGImage: cgImage)
     }
 }

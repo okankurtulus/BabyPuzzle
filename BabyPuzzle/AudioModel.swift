@@ -21,18 +21,18 @@ class AudioModel: BaseModel {
     
     private override init() {
         super.init()
-        backgroundAudio = initAudioPlayer("background", type: "wav")
+        backgroundAudio = initAudioPlayer("background", type: "mp3")
         backgroundAudio?.numberOfLoops = -1
         backgroundAudio?.volume = 0.1
         
-        shrinkAudio = initAudioPlayer("zoomin", type: "wav")
+        shrinkAudio = initAudioPlayer("shrink", type: "mp3")
         
-        expandAudio = initAudioPlayer("expand", type: "wav")
+        expandAudio = initAudioPlayer("expand", type: "mp3")
         
-        puzzlePieceFitAudio = initAudioPlayer("fit", type: "wav")
+        puzzlePieceFitAudio = initAudioPlayer("fit", type: "mp3")
         
-        successAudio = initAudioPlayer("success", type: "wav")
-        applause = initAudioPlayer("applause", type: "wav")
+        successAudio = initAudioPlayer("success", type: "mp3")
+        applause = initAudioPlayer("applause", type: "mp3")
     }
     
     private func initAudioPlayer(fileName : String, type : String) -> AVAudioPlayer? {

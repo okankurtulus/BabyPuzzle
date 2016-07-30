@@ -14,7 +14,7 @@ import GoogleMobileAds
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
     func initFireBase() {
         FIRApp.configure()
     }
