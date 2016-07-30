@@ -20,8 +20,11 @@ class GameStatsModel: BaseModel {
     var gameLevel : Int
     
     override private init() {
-        //gameOffset = Int(arc4random_uniform(UInt32(1000)))
         gameLevel = max(0, defaults.integerForKey(gameLevelKey)-1)
+        #if DEBUG
+            gameOffset = (Int(arc4random_uniform(UInt32(1000))) % 10)
+            gameLevel = 8
+        #endif
     }
     
     func nexLevel() {

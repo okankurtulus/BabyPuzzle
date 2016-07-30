@@ -155,7 +155,7 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
         let level = gameStatsModel.gameOffset+gameStatsModel.gameLevel
         AudioModel.sharedInstance.backgroundAudio?.play()
         
-        let newImageName = BackgroundImageModel.names[level-1 % BackgroundImageModel.names.count]
+        let newImageName = BackgroundImageModel.names[(level-1) % BackgroundImageModel.names.count]
         UIView .transitionWithView(self.gameBackgroundImageView,
                                    duration: 4,
                                    options: UIViewAnimationOptions.TransitionCurlDown,
@@ -217,6 +217,7 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
         placeHolderView.backgroundColor = UIColor.clearColor()
         placeHolderView.contentMode = UIViewContentMode.ScaleToFill
         placeHolderView.clipsToBounds = true
+        placeHolderView.accessibilityIdentifier = "placeHolder\(withIndex)"
         self.view.addSubview(placeHolderView)
         
         puzzlePiece.backgroundColor = UIColor.clearColor()
@@ -277,7 +278,7 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
         self.reset()
         
         var pieceCount : Int = Int(self.gameBackgroundImageView.frame.size.height / self.puzzlePieceContainerView.frame.size.height)
-        pieceCount = min(pieceCount, gameStatsModel.gameLevel)
+        pieceCount = min(pieceCount - 1, gameStatsModel.gameLevel)
         self.initGameScene(pieceCount)
     }
     
