@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B1934CEA1D2ABA7B00CDCEFC"
-               BuildableName = "BabyPuzzle.app"
-               BlueprintName = "BabyPuzzle"
-               ReferencedContainer = "container:BabyPuzzle.xcodeproj">
+               BuildableName = "Baby Puzzle.app"
+               BlueprintName = "Baby Puzzle"
+               ReferencedContainer = "container:Baby Puzzle.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,14 +28,24 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B12763A01D4CC0F1006291D8"
+               BuildableName = "Baby Puzzle.xctest"
+               BlueprintName = "Baby PuzzleUITests"
+               ReferencedContainer = "container:Baby Puzzle.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B1934CEA1D2ABA7B00CDCEFC"
-            BuildableName = "BabyPuzzle.app"
-            BlueprintName = "BabyPuzzle"
-            ReferencedContainer = "container:BabyPuzzle.xcodeproj">
+            BuildableName = "Baby Puzzle.app"
+            BlueprintName = "Baby Puzzle"
+            ReferencedContainer = "container:Baby Puzzle.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B1934CEA1D2ABA7B00CDCEFC"
-            BuildableName = "BabyPuzzle.app"
-            BlueprintName = "BabyPuzzle"
-            ReferencedContainer = "container:BabyPuzzle.xcodeproj">
+            BuildableName = "Baby Puzzle.app"
+            BlueprintName = "Baby Puzzle"
+            ReferencedContainer = "container:Baby Puzzle.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B1934CEA1D2ABA7B00CDCEFC"
-            BuildableName = "BabyPuzzle.app"
-            BlueprintName = "BabyPuzzle"
-            ReferencedContainer = "container:BabyPuzzle.xcodeproj">
+            BuildableName = "Baby Puzzle.app"
+            BlueprintName = "Baby Puzzle"
+            ReferencedContainer = "container:Baby Puzzle.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

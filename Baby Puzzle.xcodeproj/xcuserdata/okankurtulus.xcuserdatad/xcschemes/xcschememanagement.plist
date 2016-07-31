@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Prod BabyPuzzle.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>B12763A01D4CC0F1006291D8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B1934CEA1D2ABA7B00CDCEFC</key>
 		<dict>
 			<key>primary</key>

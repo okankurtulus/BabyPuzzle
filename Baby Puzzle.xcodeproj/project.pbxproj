@@ -15,6 +15,8 @@
 		B12763981D4C8824006291D8 /* fit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B12763971D4C8824006291D8 /* fit.mp3 */; };
 		B127639A1D4C889E006291D8 /* shrink.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B12763991D4C889E006291D8 /* shrink.mp3 */; };
 		B127639C1D4C9CEB006291D8 /* AssetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B127639B1D4C9CEB006291D8 /* AssetModel.swift */; };
+		B12763A41D4CC0F2006291D8 /* BabyPuzzleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12763A31D4CC0F2006291D8 /* BabyPuzzleUITests.swift */; };
+		B12763AC1D4CC175006291D8 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12763AB1D4CC175006291D8 /* SnapshotHelper.swift */; };
 		B1520A0E1D4A2C9900F04C9B /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1520A0D1D4A2C9900F04C9B /* ImageModel.swift */; };
 		B15C234D1D49E04200C90417 /* AudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15C234C1D49E04200C90417 /* AudioModel.swift */; };
 		B18372491D4B6521003ED35A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B18372481D4B6521003ED35A /* GoogleService-Info.plist */; };
@@ -29,6 +31,16 @@
 		B1F382CE1D2F8B0D000DB578 /* PuzzlePiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F382CD1D2F8B0D000DB578 /* PuzzlePiece.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B12763A61D4CC0F2006291D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1934CE31D2ABA7B00CDCEFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1934CEA1D2ABA7B00CDCEFC;
+			remoteInfo = BabyPuzzle;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		00B42B4E2B097C7BF3C345DB /* Pods-BabyPuzzle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyPuzzle.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabyPuzzle/Pods-BabyPuzzle.release.xcconfig"; sourceTree = "<group>"; };
 		53A84564B1EF296DAD1EA84F /* Pods_BabyPuzzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyPuzzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,12 +52,16 @@
 		B12763971D4C8824006291D8 /* fit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fit.mp3; sourceTree = "<group>"; };
 		B12763991D4C889E006291D8 /* shrink.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shrink.mp3; sourceTree = "<group>"; };
 		B127639B1D4C9CEB006291D8 /* AssetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetModel.swift; sourceTree = "<group>"; };
+		B12763A11D4CC0F1006291D8 /* Baby Puzzle.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Baby Puzzle.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B12763A31D4CC0F2006291D8 /* BabyPuzzleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyPuzzleUITests.swift; sourceTree = "<group>"; };
+		B12763A51D4CC0F2006291D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B12763AB1D4CC175006291D8 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		B1520A0D1D4A2C9900F04C9B /* ImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		B15C234C1D49E04200C90417 /* AudioModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioModel.swift; sourceTree = "<group>"; };
 		B18372481D4B6521003ED35A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B183724A1D4B69C7003ED35A /* GoogleServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleServiceModel.swift; sourceTree = "<group>"; };
 		B183724C1D4B6E3C003ED35A /* BabyPuzzle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BabyPuzzle-Bridging-Header.h"; sourceTree = "<group>"; };
-		B1934CEB1D2ABA7B00CDCEFC /* BabyPuzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyPuzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1934CEB1D2ABA7B00CDCEFC /* Baby Puzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baby Puzzle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1934CEE1D2ABA7B00CDCEFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1934CF01D2ABA7B00CDCEFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B1934CF31D2ABA7B00CDCEFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,6 +74,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B127639E1D4CC0F1006291D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1934CE81D2ABA7B00CDCEFC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,6 +101,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B12763A21D4CC0F2006291D8 /* BabyPuzzleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B12763A31D4CC0F2006291D8 /* BabyPuzzleUITests.swift */,
+				B12763AB1D4CC175006291D8 /* SnapshotHelper.swift */,
+				B12763A51D4CC0F2006291D8 /* Info.plist */,
+			);
+			path = BabyPuzzleUITests;
+			sourceTree = "<group>";
+		};
 		B15C234E1D49E56A00C90417 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				B1934CED1D2ABA7B00CDCEFC /* BabyPuzzle */,
+				B12763A21D4CC0F2006291D8 /* BabyPuzzleUITests */,
 				B1934CEC1D2ABA7B00CDCEFC /* Products */,
 				0BEFE0F3771D1D282AB51069 /* Pods */,
 				C8CF996C7D55A7DD88FDCC3A /* Frameworks */,
@@ -104,7 +138,8 @@
 		B1934CEC1D2ABA7B00CDCEFC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B1934CEB1D2ABA7B00CDCEFC /* BabyPuzzle.app */,
+				B1934CEB1D2ABA7B00CDCEFC /* Baby Puzzle.app */,
+				B12763A11D4CC0F1006291D8 /* Baby Puzzle.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,9 +218,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B1934CEA1D2ABA7B00CDCEFC /* BabyPuzzle */ = {
+		B12763A01D4CC0F1006291D8 /* Baby PuzzleUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B1934CFD1D2ABA7B00CDCEFC /* Build configuration list for PBXNativeTarget "BabyPuzzle" */;
+			buildConfigurationList = B12763AA1D4CC0F2006291D8 /* Build configuration list for PBXNativeTarget "Baby PuzzleUITests" */;
+			buildPhases = (
+				B127639D1D4CC0F1006291D8 /* Sources */,
+				B127639E1D4CC0F1006291D8 /* Frameworks */,
+				B127639F1D4CC0F1006291D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B12763A71D4CC0F2006291D8 /* PBXTargetDependency */,
+			);
+			name = "Baby PuzzleUITests";
+			productName = BabyPuzzleUITests;
+			productReference = B12763A11D4CC0F1006291D8 /* Baby Puzzle.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		B1934CEA1D2ABA7B00CDCEFC /* Baby Puzzle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1934CFD1D2ABA7B00CDCEFC /* Build configuration list for PBXNativeTarget "Baby Puzzle" */;
 			buildPhases = (
 				49EA2242FCA54606CBD55A52 /* 📦 Check Pods Manifest.lock */,
 				B1934CE71D2ABA7B00CDCEFC /* Sources */,
@@ -198,9 +251,9 @@
 			);
 			dependencies = (
 			);
-			name = BabyPuzzle;
+			name = "Baby Puzzle";
 			productName = BabyPuzzle;
-			productReference = B1934CEB1D2ABA7B00CDCEFC /* BabyPuzzle.app */;
+			productReference = B1934CEB1D2ABA7B00CDCEFC /* Baby Puzzle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -213,12 +266,22 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Okan Kurtulus";
 				TargetAttributes = {
+					B12763A01D4CC0F1006291D8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = B1934CEA1D2ABA7B00CDCEFC;
+					};
 					B1934CEA1D2ABA7B00CDCEFC = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8V9FEAB5WD;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
-			buildConfigurationList = B1934CE61D2ABA7B00CDCEFC /* Build configuration list for PBXProject "BabyPuzzle" */;
+			buildConfigurationList = B1934CE61D2ABA7B00CDCEFC /* Build configuration list for PBXProject "Baby Puzzle" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -231,12 +294,20 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B1934CEA1D2ABA7B00CDCEFC /* BabyPuzzle */,
+				B1934CEA1D2ABA7B00CDCEFC /* Baby Puzzle */,
+				B12763A01D4CC0F1006291D8 /* Baby PuzzleUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B127639F1D4CC0F1006291D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1934CE91D2ABA7B00CDCEFC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -305,6 +376,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B127639D1D4CC0F1006291D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B12763A41D4CC0F2006291D8 /* BabyPuzzleUITests.swift in Sources */,
+				B12763AC1D4CC175006291D8 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1934CE71D2ABA7B00CDCEFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -322,6 +402,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B12763A71D4CC0F2006291D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1934CEA1D2ABA7B00CDCEFC /* Baby Puzzle */;
+			targetProxy = B12763A61D4CC0F2006291D8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B1934CF21D2ABA7B00CDCEFC /* Main.storyboard */ = {
@@ -343,6 +431,28 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B12763A81D4CC0F2006291D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BabyPuzzleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = okankurtulus.BabyPuzzleUITests;
+				PRODUCT_NAME = "Baby Puzzle";
+				TEST_TARGET_NAME = BabyPuzzle;
+			};
+			name = Debug;
+		};
+		B12763A91D4CC0F2006291D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BabyPuzzleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = okankurtulus.BabyPuzzleUITests;
+				PRODUCT_NAME = "Baby Puzzle";
+				TEST_TARGET_NAME = BabyPuzzle;
+			};
+			name = Release;
+		};
 		B1934CFB1D2ABA7B00CDCEFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -438,7 +548,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "\"-D\" \"COCOAPODS\" -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.okn.babypuzzle;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Baby Puzzle";
 				SWIFT_OBJC_BRIDGING_HEADER = "BabyPuzzle/BabyPuzzle-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -453,7 +563,7 @@
 				INFOPLIST_FILE = BabyPuzzle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.okn.babypuzzle;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Baby Puzzle";
 				SWIFT_OBJC_BRIDGING_HEADER = "BabyPuzzle/BabyPuzzle-Bridging-Header.h";
 			};
 			name = Release;
@@ -461,7 +571,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B1934CE61D2ABA7B00CDCEFC /* Build configuration list for PBXProject "BabyPuzzle" */ = {
+		B12763AA1D4CC0F2006291D8 /* Build configuration list for PBXNativeTarget "Baby PuzzleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B12763A81D4CC0F2006291D8 /* Debug */,
+				B12763A91D4CC0F2006291D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1934CE61D2ABA7B00CDCEFC /* Build configuration list for PBXProject "Baby Puzzle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B1934CFB1D2ABA7B00CDCEFC /* Debug */,
@@ -470,7 +589,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B1934CFD1D2ABA7B00CDCEFC /* Build configuration list for PBXNativeTarget "BabyPuzzle" */ = {
+		B1934CFD1D2ABA7B00CDCEFC /* Build configuration list for PBXNativeTarget "Baby Puzzle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B1934CFE1D2ABA7B00CDCEFC /* Debug */,

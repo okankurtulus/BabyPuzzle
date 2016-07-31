@@ -114,7 +114,7 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
         
         let minWidth = self.puzzlePieceContainerView.frame.size.width
         let randomHeight = randomGenerate(minWidth, max: min(contentFrame.height - randomY, maxLimitForRandomFrame))
-        let randomWidth = randomGenerate(minWidth, max: min(contentFrame.width - randomX, maxLimitForRandomFrame))
+        let randomWidth = randomHeight // randomGenerate(minWidth, max: min(contentFrame.width - randomX, maxLimitForRandomFrame))
         let originalFrame = CGRectMake(randomX, randomY, randomWidth, randomHeight)
         return originalFrame
     }
