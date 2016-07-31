@@ -1,0 +1,3 @@
+- Baby puzzle is a simple puzzle game
+- It helps children to match patterns and colours
+- It depends on moving the correct piece in correct position
