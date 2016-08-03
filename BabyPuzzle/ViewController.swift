@@ -41,6 +41,8 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
     var puzzlePieces : Array = [PuzzlePiece]()
     
     let gameStatsModel = GameStatsModel.sharedInstance
+    var isFirstOpen = true
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,11 +58,19 @@ class ViewController: UIViewController, PuzzlePieceDelegate {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        resetGameScene()
+        if(isFirstOpen) {
+            resetGameScene()
+            isFirstOpen = false
+        }
     }
     
     func initLevelLabel() {
-        self.leveLabel.font = UIFont.systemFontOfSize(18, weight: 2)
+        if #available(iOS 8.2, *) {
+            self.leveLabel.font = UIFont.systemFontOfSize(18, weight: 2)
+        } else {
+            // Fallback on earlier versions
+            self.leveLabel.font = UIFont.systemFontOfSize(18)
+        }
         self.leveLabel.textColor = UIColor.blueColor()
         self.leveLabel.shadowOffset = CGSizeMake(1, 1)
         self.leveLabel.shadowColor = UIColor.grayColor()
