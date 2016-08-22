@@ -4,12 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-BabyPuzzle.xcscheme</key>
+		<key>Pods-Baby Puzzle.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Toucan.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>iRate.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

@@ -3,8 +3,9 @@
 # Uncomment this line if you're using Swift
 use_frameworks!
 
-target 'BabyPuzzle' do
+target 'Baby Puzzle' do
 
+pod 'iRate', '~> 1.11'
 pod 'Toucan', '~> 0.5'
 pod 'Firebase'
 pod 'Firebase/AdMob'

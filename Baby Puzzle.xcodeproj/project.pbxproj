@@ -29,6 +29,7 @@
 		B1E4BF681D3E26D3002B54FA /* GameStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E4BF671D3E26D3002B54FA /* GameStatsModel.swift */; };
 		B1E4BF6A1D3E27FF002B54FA /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E4BF691D3E27FF002B54FA /* BaseModel.swift */; };
 		B1F382CE1D2F8B0D000DB578 /* PuzzlePiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F382CD1D2F8B0D000DB578 /* PuzzlePiece.swift */; };
+		C16D7B8A35B185BB80A20CF2 /* Pods_Baby_Puzzle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9160F0D54F6C84177A6547D1 /* Pods_Baby_Puzzle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +44,11 @@
 
 /* Begin PBXFileReference section */
 		00B42B4E2B097C7BF3C345DB /* Pods-BabyPuzzle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyPuzzle.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabyPuzzle/Pods-BabyPuzzle.release.xcconfig"; sourceTree = "<group>"; };
+		21EA22E44D67D2B67DC70DB6 /* Pods-Baby Puzzle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baby Puzzle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Baby Puzzle/Pods-Baby Puzzle.release.xcconfig"; sourceTree = "<group>"; };
+		232FD1F3AAD370109749460B /* Pods-Baby Puzzle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baby Puzzle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Baby Puzzle/Pods-Baby Puzzle.debug.xcconfig"; sourceTree = "<group>"; };
 		53A84564B1EF296DAD1EA84F /* Pods_BabyPuzzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyPuzzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		629087C960996745E5D46979 /* Pods-BabyPuzzle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyPuzzle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabyPuzzle/Pods-BabyPuzzle.debug.xcconfig"; sourceTree = "<group>"; };
+		9160F0D54F6C84177A6547D1 /* Pods_Baby_Puzzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Baby_Puzzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B127638F1D4C832B006291D8 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		B12763911D4C833D006291D8 /* applause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = applause.mp3; sourceTree = "<group>"; };
 		B12763921D4C833D006291D8 /* expand.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = expand.mp3; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86A4B02C061A844219EAF8AF /* Pods_BabyPuzzle.framework in Frameworks */,
+				C16D7B8A35B185BB80A20CF2 /* Pods_Baby_Puzzle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +103,8 @@
 			children = (
 				629087C960996745E5D46979 /* Pods-BabyPuzzle.debug.xcconfig */,
 				00B42B4E2B097C7BF3C345DB /* Pods-BabyPuzzle.release.xcconfig */,
+				232FD1F3AAD370109749460B /* Pods-Baby Puzzle.debug.xcconfig */,
+				21EA22E44D67D2B67DC70DB6 /* Pods-Baby Puzzle.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -213,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				53A84564B1EF296DAD1EA84F /* Pods_BabyPuzzle.framework */,
+				9160F0D54F6C84177A6547D1 /* Pods_Baby_Puzzle.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -345,7 +353,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabyPuzzle/Pods-BabyPuzzle-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Baby Puzzle/Pods-Baby Puzzle-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		49EA2242FCA54606CBD55A52 /* 📦 Check Pods Manifest.lock */ = {
@@ -375,7 +383,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabyPuzzle/Pods-BabyPuzzle-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Baby Puzzle/Pods-Baby Puzzle-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -545,7 +553,7 @@
 		};
 		B1934CFE1D2ABA7B00CDCEFC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 629087C960996745E5D46979 /* Pods-BabyPuzzle.debug.xcconfig */;
+			baseConfigurationReference = 232FD1F3AAD370109749460B /* Pods-Baby Puzzle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -565,7 +573,7 @@
 		};
 		B1934CFF1D2ABA7B00CDCEFC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00B42B4E2B097C7BF3C345DB /* Pods-BabyPuzzle.release.xcconfig */;
+			baseConfigurationReference = 21EA22E44D67D2B67DC70DB6 /* Pods-Baby Puzzle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

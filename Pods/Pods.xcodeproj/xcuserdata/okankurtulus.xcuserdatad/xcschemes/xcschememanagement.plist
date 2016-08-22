@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-Baby Puzzle.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>Pods-BabyPuzzle.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -14,10 +19,30 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>iRate.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>00E74CED770597EF76DEE6FE824D1B7A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>26EF80C5BF5451DBC2731B8C8324224A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2C6836B2F50E29AA8B6FD1649EC03389</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>92F4D2D1590460AFB3425F4ACBDBA581</key>
 		<dict>
 			<key>primary</key>
 			<true/>

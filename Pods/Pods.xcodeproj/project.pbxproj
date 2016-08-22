@@ -7,131 +7,191 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		226D89C3AC0430081FFC2B108E069C85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		470D5A1D0C4D21A29415C5F63763BBE3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		790754EFB5F94995D340F7ECEAD23D29 /* Toucan-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC31BADA06116476FECFBC44EB35E38 /* Toucan-dummy.m */; };
-		7D32C802717529FE4931B9B48BA1B7A4 /* Pods-BabyPuzzle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90383984F023141DFEB889C4EAC7BA0A /* Pods-BabyPuzzle-dummy.m */; };
-		B3CCEEC60CC2992672BE559205C15DEA /* Toucan.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9091887D4D2AED2D4A7CB6E3498A198 /* Toucan.swift */; };
-		B608BDB55345FA08591EB6C86236B8B8 /* Toucan-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 08861BA05D3DD841D966DE7E19C24910 /* Toucan-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E7EA990E14CA434B9DDA0A9ACEC06596 /* Pods-BabyPuzzle-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CF6BEC3D1BDE0D362A818F4F082CD99C /* Pods-BabyPuzzle-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1CBCC11AFEC39AE34CF22778C05A0C30 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5983E0B446FA05F562F8778997D2B6F4 /* iRate.bundle */; };
+		390A8863AE159A26A5744AFD4D272C1B /* iRate-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D197A5E07AE02913CFBAC65D3367F5C9 /* iRate-dummy.m */; };
+		3B0BC087FEF77A4ACC7ABA82BE33FD1A /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 395844992AFC97DF8C37684C8510EC8A /* iRate.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3F16307A3224D50EF59E4021DE91813B /* Toucan-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5D0EFD6B279417A6452B4E8FB03B46 /* Toucan-dummy.m */; };
+		42D52FD11C172750DA2A7183DAB3762E /* iRate-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D6E5B697B8B9413670AA3D1BE73A997 /* iRate-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		452F4C89E3D3BF1823E9A8FCE2CFC4AC /* Pods-Baby Puzzle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B4364CD4B54B2FE04E3CDFC61FB893D4 /* Pods-Baby Puzzle-dummy.m */; };
+		4FFD9731A5DD596C6CAB44B0875DE9D2 /* Toucan-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3592947E9FABEE8A3C7959823B48DB42 /* Toucan-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6387BA76A482401FF6579BE02DC00906 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		A0ADCBB2640978D0A8CFC7E3905F3212 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		BDFAB222CE5AEC9EB69D0F6EFF62D212 /* iRate.h in Headers */ = {isa = PBXBuildFile; fileRef = C865FBA2FD905362D7F72598F19CE4A6 /* iRate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD03533640A18DF80975882E89B4F228 /* Pods-Baby Puzzle-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D7E231B0D3DBC72AA093CA079B254DBA /* Pods-Baby Puzzle-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D49E52AAAE8A63A2FFE6BC075CC0B6BF /* Toucan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD15F7954916802D4538DD8570DBC1 /* Toucan.swift */; };
+		E1EBCED81B647B2F2BD3E733186CDF97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9BF70D308E26102B32A6FA8CE7A620E1 /* PBXContainerItemProxy */ = {
+		2FAB2C84DD8B5D23EA0F8F479AFE9555 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2C6836B2F50E29AA8B6FD1649EC03389;
+			remoteGlobalIDString = 00E74CED770597EF76DEE6FE824D1B7A;
+			remoteInfo = iRate;
+		};
+		89B4F87B750B5E850169F45467882D7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26EF80C5BF5451DBC2731B8C8324224A;
 			remoteInfo = Toucan;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0848F41B0502A0F800BE6CB7AD559C7A /* Pods-BabyPuzzle.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BabyPuzzle.modulemap"; sourceTree = "<group>"; };
-		08861BA05D3DD841D966DE7E19C24910 /* Toucan-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toucan-umbrella.h"; sourceTree = "<group>"; };
-		15E7664BA663DC98196F82B4BF189247 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
-		20899D43A6065447AF13A6FEBB1345F9 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
-		2B102D816E5CE502D8B4159A4B58C0B3 /* Pods-BabyPuzzle-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BabyPuzzle-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2EFD75DADA91F19E789F7D96F0924BBE /* Pods-BabyPuzzle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BabyPuzzle.release.xcconfig"; sourceTree = "<group>"; };
-		37CAAC5F38EE2C0EC31794D8AC94E903 /* Pods_BabyPuzzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyPuzzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CA21FA3A7B260205311B13A83B6E781 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Headers/Firebase.h; sourceTree = "<group>"; };
-		4E149274B80409005789BEE485FA719E /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
-		5BC31BADA06116476FECFBC44EB35E38 /* Toucan-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toucan-dummy.m"; sourceTree = "<group>"; };
-		6A678E15C103FA1618B33F09506A848A /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
-		7643E4CEAD463D36B16BC8BAADC60457 /* Pods-BabyPuzzle-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BabyPuzzle-resources.sh"; sourceTree = "<group>"; };
-		8E7D9D9DD21BEF375965AEE84B51C49F /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
-		90383984F023141DFEB889C4EAC7BA0A /* Pods-BabyPuzzle-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BabyPuzzle-dummy.m"; sourceTree = "<group>"; };
+		009A3A24360898D8A9026234A89421ED /* Pods-Baby Puzzle-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Baby Puzzle-frameworks.sh"; sourceTree = "<group>"; };
+		037F2E34B718363C6B6FDC0FE0A0CC66 /* Pods-Baby Puzzle-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Baby Puzzle-acknowledgements.plist"; sourceTree = "<group>"; };
+		10F85FA4EFB141BD9B669A3ADAFEF13D /* Pods-Baby Puzzle.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Baby Puzzle.modulemap"; sourceTree = "<group>"; };
+		12A6E99A8EAC5E0C8E3A45B5A74A98C4 /* Pods-Baby Puzzle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Baby Puzzle.release.xcconfig"; sourceTree = "<group>"; };
+		20BE7DE149B780336F26014DFC76C9A6 /* Toucan-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toucan-prefix.pch"; sourceTree = "<group>"; };
+		22AC4F89C06F69E918B2F3C333139F22 /* iRate.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = iRate.modulemap; sourceTree = "<group>"; };
+		25698E881FE89FD1C4CD610E3D77AD5A /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		280E6F0CE5E4F842511C032B9FF08FC1 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
+		344F7A5A668FCE8DDFDDCDFB16ED52F2 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
+		3592947E9FABEE8A3C7959823B48DB42 /* Toucan-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toucan-umbrella.h"; sourceTree = "<group>"; };
+		35BFEB5859C8BE64254EE02C8058218D /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Headers/Public/FIRInstanceID.h; sourceTree = "<group>"; };
+		35E60880509B20517F3322CA13ED3545 /* Toucan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toucan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		395844992AFC97DF8C37684C8510EC8A /* iRate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = iRate.m; path = iRate/iRate.m; sourceTree = "<group>"; };
+		3DA5E89F2EF120CB37055F8AC2C62ACC /* iRate.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iRate.xcconfig; sourceTree = "<group>"; };
+		3E8B76605ADBAED1919767EDAAA336CD /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		580670651DA2AF78BAA9E7B202EC365C /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Headers/Firebase.h; sourceTree = "<group>"; };
+		595BDD44F8D4AB26FD68F26A5AF5A860 /* Pods_Baby_Puzzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Baby_Puzzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5983E0B446FA05F562F8778997D2B6F4 /* iRate.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = iRate.bundle; path = iRate/iRate.bundle; sourceTree = "<group>"; };
+		6202EE1825F9FB1E22C7AA186763FE3F /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		647413FB9C400A239FFF978E2B2B41AA /* Toucan.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Toucan.xcconfig; sourceTree = "<group>"; };
+		70BECDC61B4833F4FEB74EE84E0439A7 /* Pods-Baby Puzzle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Baby Puzzle.debug.xcconfig"; sourceTree = "<group>"; };
+		7D6E5B697B8B9413670AA3D1BE73A997 /* iRate-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iRate-umbrella.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9AA63590CAC2B2B8E71785E6362432C2 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Headers/Public/FIRInstanceID.h; sourceTree = "<group>"; };
-		9C55BB929B9AC255A0A3DFEC5DB4DC02 /* Pods-BabyPuzzle-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BabyPuzzle-acknowledgements.plist"; sourceTree = "<group>"; };
-		AD262767CB633D53D5E566494CF536A3 /* Toucan-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toucan-prefix.pch"; sourceTree = "<group>"; };
-		AD4F5E7F94879D9D90B0C73FAA227624 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B244ECA9C4C55E68E01F3C9304ABC48D /* Pods-BabyPuzzle-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BabyPuzzle-frameworks.sh"; sourceTree = "<group>"; };
-		B9091887D4D2AED2D4A7CB6E3498A198 /* Toucan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toucan.swift; path = Source/Toucan.swift; sourceTree = "<group>"; };
-		C2655E814C727F9B1C8A7E956FC64D25 /* Toucan.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Toucan.xcconfig; sourceTree = "<group>"; };
+		9BCA4F5ED1A9DE6007294B81546CF97E /* Pods-Baby Puzzle-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Baby Puzzle-resources.sh"; sourceTree = "<group>"; };
+		A2822EA3D0F55E113CA9FC5DD9B4A0D3 /* Pods-Baby Puzzle-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Baby Puzzle-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B2FACCF0151BE46CA43835B87EC7DE5F /* iRate-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iRate-prefix.pch"; sourceTree = "<group>"; };
+		B4364CD4B54B2FE04E3CDFC61FB893D4 /* Pods-Baby Puzzle-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Baby Puzzle-dummy.m"; sourceTree = "<group>"; };
+		BA3FF7CB3CBAF10077C6560DFBDEBA6B /* Toucan.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Toucan.modulemap; sourceTree = "<group>"; };
+		C1405F28DE9206D4180B2296049F51F0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C48EB6E089A99A3B54A8AFD0185793F9 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		C865FBA2FD905362D7F72598F19CE4A6 /* iRate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iRate.h; path = iRate/iRate.h; sourceTree = "<group>"; };
+		CE9BA489B2370B612AE83813D748AE24 /* iRate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iRate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CF6BEC3D1BDE0D362A818F4F082CD99C /* Pods-BabyPuzzle-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BabyPuzzle-umbrella.h"; sourceTree = "<group>"; };
-		E4ECE8C3DDFC7864F2A8DF36074849B2 /* Toucan.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Toucan.modulemap; sourceTree = "<group>"; };
-		E64C8BF0D1A6AED9F21E92835746E0DE /* Pods-BabyPuzzle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BabyPuzzle.debug.xcconfig"; sourceTree = "<group>"; };
-		ED0A477035A3E7168B5D2DC3F5B8D30A /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
-		FD267BBEEA5E2A42E300CAADDA684448 /* Toucan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toucan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE2CE9FD6B22DE61C42AEA42C66B8E5A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D197A5E07AE02913CFBAC65D3367F5C9 /* iRate-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iRate-dummy.m"; sourceTree = "<group>"; };
+		D2CF6469B73A86C8E41D12BAF605A045 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7E231B0D3DBC72AA093CA079B254DBA /* Pods-Baby Puzzle-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Baby Puzzle-umbrella.h"; sourceTree = "<group>"; };
+		DAEF1AF00680E5EDA894A46E2135F287 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBBD15F7954916802D4538DD8570DBC1 /* Toucan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toucan.swift; path = Source/Toucan.swift; sourceTree = "<group>"; };
+		FB5D0EFD6B279417A6452B4E8FB03B46 /* Toucan-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toucan-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		322007E44F682D48DE5F7C5572DBB7B9 /* Frameworks */ = {
+		2A8CA60287D21AD96C3947999F2037AF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				470D5A1D0C4D21A29415C5F63763BBE3 /* Foundation.framework in Frameworks */,
+				6387BA76A482401FF6579BE02DC00906 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E15A5D08C637125CF32AEB0D1E1F8908 /* Frameworks */ = {
+		7681D97898C685EB990264541F4A508E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				226D89C3AC0430081FFC2B108E069C85 /* Foundation.framework in Frameworks */,
+				A0ADCBB2640978D0A8CFC7E3905F3212 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E536086B06D5186C814CE2FBB07E6FC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1EBCED81B647B2F2BD3E733186CDF97 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0AB337923C4778133FB5AB04901BEE68 /* GoogleUtilities */ = {
+		0106228BE6C7EEC4BD6B1BA1C03625C0 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
-				978F371BFB6260A3F402DE53694A556E /* Frameworks */,
+				580670651DA2AF78BAA9E7B202EC365C /* Firebase.h */,
 			);
-			path = GoogleUtilities;
+			name = Analytics;
 			sourceTree = "<group>";
 		};
-		17503DC5F49A036C31DD11E812A597BB /* Firebase */ = {
+		0B73B067EE0EB6BD4403F55F51B5E095 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				AC6E73A450542F0CF46A4B535FC6FDCD /* Analytics */,
+				C1405F28DE9206D4180B2296049F51F0 /* Info.plist */,
+				BA3FF7CB3CBAF10077C6560DFBDEBA6B /* Toucan.modulemap */,
+				647413FB9C400A239FFF978E2B2B41AA /* Toucan.xcconfig */,
+				FB5D0EFD6B279417A6452B4E8FB03B46 /* Toucan-dummy.m */,
+				20BE7DE149B780336F26014DFC76C9A6 /* Toucan-prefix.pch */,
+				3592947E9FABEE8A3C7959823B48DB42 /* Toucan-umbrella.h */,
 			);
-			path = Firebase;
+			name = "Support Files";
+			path = "../Target Support Files/Toucan";
 			sourceTree = "<group>";
 		};
-		22A07FE80B984FEC73686C7266013084 /* Google-Mobile-Ads-SDK */ = {
+		155EB345745F335906D576E1C1BAA440 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B820748F13DA564B36D9F12D05CEA2E7 /* Frameworks */,
-			);
-			path = "Google-Mobile-Ads-SDK";
-			sourceTree = "<group>";
-		};
-		2DD6DC1B569FC2ACB372CA3709C4C0F0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				ED0A477035A3E7168B5D2DC3F5B8D30A /* GoogleInterchangeUtilities.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2FADB9A10AEBAFC80732A74224B8333C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				37CAAC5F38EE2C0EC31794D8AC94E903 /* Pods_BabyPuzzle.framework */,
-				FD267BBEEA5E2A42E300CAADDA684448 /* Toucan.framework */,
+				CE9BA489B2370B612AE83813D748AE24 /* iRate.framework */,
+				595BDD44F8D4AB26FD68F26A5AF5A860 /* Pods_Baby_Puzzle.framework */,
+				35E60880509B20517F3322CA13ED3545 /* Toucan.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3D48091490D063713F769A56C2437242 /* Pods */ = {
+		21FAFE95736AD0320295B20A62421D0D /* Pods-Baby Puzzle */ = {
 			isa = PBXGroup;
 			children = (
-				17503DC5F49A036C31DD11E812A597BB /* Firebase */,
-				BA53F44C8CC3734D14E68D3EFFCD2B34 /* FirebaseAnalytics */,
-				FD85A8C0F3757AE837812A330E612427 /* FirebaseInstanceID */,
-				22A07FE80B984FEC73686C7266013084 /* Google-Mobile-Ads-SDK */,
-				F091BB39333D56ACF332C9458C53FE00 /* GoogleInterchangeUtilities */,
-				4016EB3A9FC0D7CD54BA76E8DD09F011 /* GoogleSymbolUtilities */,
-				0AB337923C4778133FB5AB04901BEE68 /* GoogleUtilities */,
-				D45E6A5C36389130F70C8D22AD912CF0 /* Toucan */,
+				DAEF1AF00680E5EDA894A46E2135F287 /* Info.plist */,
+				10F85FA4EFB141BD9B669A3ADAFEF13D /* Pods-Baby Puzzle.modulemap */,
+				A2822EA3D0F55E113CA9FC5DD9B4A0D3 /* Pods-Baby Puzzle-acknowledgements.markdown */,
+				037F2E34B718363C6B6FDC0FE0A0CC66 /* Pods-Baby Puzzle-acknowledgements.plist */,
+				B4364CD4B54B2FE04E3CDFC61FB893D4 /* Pods-Baby Puzzle-dummy.m */,
+				009A3A24360898D8A9026234A89421ED /* Pods-Baby Puzzle-frameworks.sh */,
+				9BCA4F5ED1A9DE6007294B81546CF97E /* Pods-Baby Puzzle-resources.sh */,
+				D7E231B0D3DBC72AA093CA079B254DBA /* Pods-Baby Puzzle-umbrella.h */,
+				70BECDC61B4833F4FEB74EE84E0439A7 /* Pods-Baby Puzzle.debug.xcconfig */,
+				12A6E99A8EAC5E0C8E3A45B5A74A98C4 /* Pods-Baby Puzzle.release.xcconfig */,
 			);
-			name = Pods;
+			name = "Pods-Baby Puzzle";
+			path = "Target Support Files/Pods-Baby Puzzle";
+			sourceTree = "<group>";
+		};
+		2BD6BAEBA10C1F3643F3AB23F6FA2B28 /* iRate */ = {
+			isa = PBXGroup;
+			children = (
+				C865FBA2FD905362D7F72598F19CE4A6 /* iRate.h */,
+				395844992AFC97DF8C37684C8510EC8A /* iRate.m */,
+				4188BCF1A9AE775FEDD11A0E1375671D /* Resources */,
+				7480B98D29A15D9B53C4FA04A0D891FA /* Support Files */,
+			);
+			path = iRate;
+			sourceTree = "<group>";
+		};
+		2E0E7F0D88E64A267552C88E6353C0D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				344F7A5A668FCE8DDFDDCDFB16ED52F2 /* GoogleUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		340F6C226536BBC6A10D719EA8F60959 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C48EB6E089A99A3B54A8AFD0185793F9 /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		39F27CFE071F38603AFA0A9A3A82071E /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				0106228BE6C7EEC4BD6B1BA1C03625C0 /* Analytics */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
@@ -142,36 +202,67 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		4016EB3A9FC0D7CD54BA76E8DD09F011 /* GoogleSymbolUtilities */ = {
+		403C356894261325B978C2FEC3EE6A53 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5F709F61CBA6666BC67259D27668B012 /* Frameworks */,
-			);
-			path = GoogleSymbolUtilities;
-			sourceTree = "<group>";
-		};
-		4E4343D63BBB3F12EA67575A8347EA41 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				918927D71F19C8C1500A74679E0583E9 /* Pods-BabyPuzzle */,
+				21FAFE95736AD0320295B20A62421D0D /* Pods-Baby Puzzle */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		5F709F61CBA6666BC67259D27668B012 /* Frameworks */ = {
+		4188BCF1A9AE775FEDD11A0E1375671D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6A678E15C103FA1618B33F09506A848A /* GoogleSymbolUtilities.framework */,
+				5983E0B446FA05F562F8778997D2B6F4 /* iRate.bundle */,
 			);
-			name = Frameworks;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		6FFB7B90A53960B709F2B9306D9D3271 /* Frameworks */ = {
+		4281334FC87F70283D8D444501C97B6A /* FirebaseAnalytics */ = {
 			isa = PBXGroup;
 			children = (
-				8E7D9D9DD21BEF375965AEE84B51C49F /* FirebaseInstanceID.framework */,
+				B794761A2ED421534C9882E98EFA59CB /* Frameworks */,
 			);
-			name = Frameworks;
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		52DA3FC4CA832A10EB8949D558663036 /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				2E0E7F0D88E64A267552C88E6353C0D8 /* Frameworks */,
+			);
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+		6881B044F1B87B32C74EABC45F3CC5CD /* Google-Mobile-Ads-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				FA00153389CFAD85BBFF5E0C6DD4AB31 /* Frameworks */,
+			);
+			path = "Google-Mobile-Ads-SDK";
+			sourceTree = "<group>";
+		};
+		7480B98D29A15D9B53C4FA04A0D891FA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2CF6469B73A86C8E41D12BAF605A045 /* Info.plist */,
+				22AC4F89C06F69E918B2F3C333139F22 /* iRate.modulemap */,
+				3DA5E89F2EF120CB37055F8AC2C62ACC /* iRate.xcconfig */,
+				D197A5E07AE02913CFBAC65D3367F5C9 /* iRate-dummy.m */,
+				B2FACCF0151BE46CA43835B87EC7DE5F /* iRate-prefix.pch */,
+				7D6E5B697B8B9413670AA3D1BE73A997 /* iRate-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/iRate";
+			sourceTree = "<group>";
+		};
+		7A93084C057E21416BDB31ED2170A952 /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				35BFEB5859C8BE64254EE02C8058218D /* FIRInstanceID.h */,
+				340F6C226536BBC6A10D719EA8F60959 /* Frameworks */,
+			);
+			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -179,66 +270,65 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				3D48091490D063713F769A56C2437242 /* Pods */,
-				2FADB9A10AEBAFC80732A74224B8333C /* Products */,
-				4E4343D63BBB3F12EA67575A8347EA41 /* Targets Support Files */,
+				8FA588D71A64908494F98D2A2135622C /* Pods */,
+				155EB345745F335906D576E1C1BAA440 /* Products */,
+				403C356894261325B978C2FEC3EE6A53 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		918927D71F19C8C1500A74679E0583E9 /* Pods-BabyPuzzle */ = {
+		88C9F6C80508D780EE180A28FD75756B /* GoogleSymbolUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				AD4F5E7F94879D9D90B0C73FAA227624 /* Info.plist */,
-				0848F41B0502A0F800BE6CB7AD559C7A /* Pods-BabyPuzzle.modulemap */,
-				2B102D816E5CE502D8B4159A4B58C0B3 /* Pods-BabyPuzzle-acknowledgements.markdown */,
-				9C55BB929B9AC255A0A3DFEC5DB4DC02 /* Pods-BabyPuzzle-acknowledgements.plist */,
-				90383984F023141DFEB889C4EAC7BA0A /* Pods-BabyPuzzle-dummy.m */,
-				B244ECA9C4C55E68E01F3C9304ABC48D /* Pods-BabyPuzzle-frameworks.sh */,
-				7643E4CEAD463D36B16BC8BAADC60457 /* Pods-BabyPuzzle-resources.sh */,
-				CF6BEC3D1BDE0D362A818F4F082CD99C /* Pods-BabyPuzzle-umbrella.h */,
-				E64C8BF0D1A6AED9F21E92835746E0DE /* Pods-BabyPuzzle.debug.xcconfig */,
-				2EFD75DADA91F19E789F7D96F0924BBE /* Pods-BabyPuzzle.release.xcconfig */,
+				9B85152AD81E079689DECF99118CC8AC /* Frameworks */,
 			);
-			name = "Pods-BabyPuzzle";
-			path = "Target Support Files/Pods-BabyPuzzle";
+			path = GoogleSymbolUtilities;
 			sourceTree = "<group>";
 		};
-		978F371BFB6260A3F402DE53694A556E /* Frameworks */ = {
+		8FA588D71A64908494F98D2A2135622C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				20899D43A6065447AF13A6FEBB1345F9 /* GoogleUtilities.framework */,
+				39F27CFE071F38603AFA0A9A3A82071E /* Firebase */,
+				4281334FC87F70283D8D444501C97B6A /* FirebaseAnalytics */,
+				7A93084C057E21416BDB31ED2170A952 /* FirebaseInstanceID */,
+				6881B044F1B87B32C74EABC45F3CC5CD /* Google-Mobile-Ads-SDK */,
+				F6E9C9FE19F415D100A0D9A8ABA388E3 /* GoogleInterchangeUtilities */,
+				88C9F6C80508D780EE180A28FD75756B /* GoogleSymbolUtilities */,
+				52DA3FC4CA832A10EB8949D558663036 /* GoogleUtilities */,
+				2BD6BAEBA10C1F3643F3AB23F6FA2B28 /* iRate */,
+				B74F71DE0C473BA846321F5485EAEEAB /* Toucan */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		AC6E73A450542F0CF46A4B535FC6FDCD /* Analytics */ = {
+		9B85152AD81E079689DECF99118CC8AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4CA21FA3A7B260205311B13A83B6E781 /* Firebase.h */,
-			);
-			name = Analytics;
-			sourceTree = "<group>";
-		};
-		B820748F13DA564B36D9F12D05CEA2E7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				15E7664BA663DC98196F82B4BF189247 /* GoogleMobileAds.framework */,
+				6202EE1825F9FB1E22C7AA186763FE3F /* GoogleSymbolUtilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BA53F44C8CC3734D14E68D3EFFCD2B34 /* FirebaseAnalytics */ = {
+		AEB488AE0D836F205081FBEF0FC389C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BA544D7C98C87177BB3CB9359E0C590A /* Frameworks */,
+				25698E881FE89FD1C4CD610E3D77AD5A /* GoogleInterchangeUtilities.framework */,
 			);
-			path = FirebaseAnalytics;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BA544D7C98C87177BB3CB9359E0C590A /* Frameworks */ = {
+		B74F71DE0C473BA846321F5485EAEEAB /* Toucan */ = {
 			isa = PBXGroup;
 			children = (
-				4E149274B80409005789BEE485FA719E /* FirebaseAnalytics.framework */,
+				DBBD15F7954916802D4538DD8570DBC1 /* Toucan.swift */,
+				0B73B067EE0EB6BD4403F55F51B5E095 /* Support Files */,
+			);
+			path = Toucan;
+			sourceTree = "<group>";
+		};
+		B794761A2ED421534C9882E98EFA59CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E8B76605ADBAED1919767EDAAA336CD /* FirebaseAnalytics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -251,75 +341,78 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D45E6A5C36389130F70C8D22AD912CF0 /* Toucan */ = {
+		F6E9C9FE19F415D100A0D9A8ABA388E3 /* GoogleInterchangeUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				B9091887D4D2AED2D4A7CB6E3498A198 /* Toucan.swift */,
-				DE381D57E377F47C053C3A6A0D7674B1 /* Support Files */,
-			);
-			path = Toucan;
-			sourceTree = "<group>";
-		};
-		DE381D57E377F47C053C3A6A0D7674B1 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FE2CE9FD6B22DE61C42AEA42C66B8E5A /* Info.plist */,
-				E4ECE8C3DDFC7864F2A8DF36074849B2 /* Toucan.modulemap */,
-				C2655E814C727F9B1C8A7E956FC64D25 /* Toucan.xcconfig */,
-				5BC31BADA06116476FECFBC44EB35E38 /* Toucan-dummy.m */,
-				AD262767CB633D53D5E566494CF536A3 /* Toucan-prefix.pch */,
-				08861BA05D3DD841D966DE7E19C24910 /* Toucan-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Toucan";
-			sourceTree = "<group>";
-		};
-		F091BB39333D56ACF332C9458C53FE00 /* GoogleInterchangeUtilities */ = {
-			isa = PBXGroup;
-			children = (
-				2DD6DC1B569FC2ACB372CA3709C4C0F0 /* Frameworks */,
+				AEB488AE0D836F205081FBEF0FC389C6 /* Frameworks */,
 			);
 			path = GoogleInterchangeUtilities;
 			sourceTree = "<group>";
 		};
-		FD85A8C0F3757AE837812A330E612427 /* FirebaseInstanceID */ = {
+		FA00153389CFAD85BBFF5E0C6DD4AB31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9AA63590CAC2B2B8E71785E6362432C2 /* FIRInstanceID.h */,
-				6FFB7B90A53960B709F2B9306D9D3271 /* Frameworks */,
+				280E6F0CE5E4F842511C032B9FF08FC1 /* GoogleMobileAds.framework */,
 			);
-			path = FirebaseInstanceID;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		684E4296E9D1B04A8BBB798B6FFA4483 /* Headers */ = {
+		33117EF8F4A66D1614F35AEAA8F9C8C0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B608BDB55345FA08591EB6C86236B8B8 /* Toucan-umbrella.h in Headers */,
+				CD03533640A18DF80975882E89B4F228 /* Pods-Baby Puzzle-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FF4BD01586A1A4FA896B9A313CB70B74 /* Headers */ = {
+		5FFCFAA224E586F72495C76741AB9027 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7EA990E14CA434B9DDA0A9ACEC06596 /* Pods-BabyPuzzle-umbrella.h in Headers */,
+				4FFD9731A5DD596C6CAB44B0875DE9D2 /* Toucan-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5E7FA1F90E1881DF086A7EA65960708 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42D52FD11C172750DA2A7183DAB3762E /* iRate-umbrella.h in Headers */,
+				BDFAB222CE5AEC9EB69D0F6EFF62D212 /* iRate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2C6836B2F50E29AA8B6FD1649EC03389 /* Toucan */ = {
+		00E74CED770597EF76DEE6FE824D1B7A /* iRate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 187D4DF0C1D581FC03167B45D6FD32AE /* Build configuration list for PBXNativeTarget "Toucan" */;
+			buildConfigurationList = CE1D76D8FDEF2F3B0A024152D1829A0F /* Build configuration list for PBXNativeTarget "iRate" */;
 			buildPhases = (
-				09E8C03BFE37E100CCFC01688025773F /* Sources */,
-				322007E44F682D48DE5F7C5572DBB7B9 /* Frameworks */,
-				684E4296E9D1B04A8BBB798B6FFA4483 /* Headers */,
+				3E004260E1C87BD14AA67E957083957B /* Sources */,
+				E536086B06D5186C814CE2FBB07E6FC4 /* Frameworks */,
+				D5E7FA1F90E1881DF086A7EA65960708 /* Headers */,
+				7C0FBB16A59F9F9A1B8AAEA878573753 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iRate;
+			productName = iRate;
+			productReference = CE9BA489B2370B612AE83813D748AE24 /* iRate.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		26EF80C5BF5451DBC2731B8C8324224A /* Toucan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87E0B2B42E310A5ECCFD9B0AB62464B4 /* Build configuration list for PBXNativeTarget "Toucan" */;
+			buildPhases = (
+				98ADF6EF6CA7CAB52DF0CFCBD101B9DA /* Sources */,
+				7681D97898C685EB990264541F4A508E /* Frameworks */,
+				5FFCFAA224E586F72495C76741AB9027 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -327,25 +420,26 @@
 			);
 			name = Toucan;
 			productName = Toucan;
-			productReference = FD267BBEEA5E2A42E300CAADDA684448 /* Toucan.framework */;
+			productReference = 35E60880509B20517F3322CA13ED3545 /* Toucan.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9D1A8D61089E5A4D153D5B49C0E67E48 /* Pods-BabyPuzzle */ = {
+		92F4D2D1590460AFB3425F4ACBDBA581 /* Pods-Baby Puzzle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A07B4C9ECD13FA1B095EE90FF8DF9D79 /* Build configuration list for PBXNativeTarget "Pods-BabyPuzzle" */;
+			buildConfigurationList = 1335A5475F4F0C15206E119E10EE4CDA /* Build configuration list for PBXNativeTarget "Pods-Baby Puzzle" */;
 			buildPhases = (
-				EBD221DECB004706AB1F89D548F27748 /* Sources */,
-				E15A5D08C637125CF32AEB0D1E1F8908 /* Frameworks */,
-				FF4BD01586A1A4FA896B9A313CB70B74 /* Headers */,
+				5DF83D987E2F1009B8C2605D0407711E /* Sources */,
+				2A8CA60287D21AD96C3947999F2037AF /* Frameworks */,
+				33117EF8F4A66D1614F35AEAA8F9C8C0 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C391D0306B745A67F6310BF2E889969F /* PBXTargetDependency */,
+				15645118C02E3494BD3EA86D50A33D4A /* PBXTargetDependency */,
+				5C5F3F285FCF3DEAE9AAE3C58E064A1B /* PBXTargetDependency */,
 			);
-			name = "Pods-BabyPuzzle";
-			productName = "Pods-BabyPuzzle";
-			productReference = 37CAAC5F38EE2C0EC31794D8AC94E903 /* Pods_BabyPuzzle.framework */;
+			name = "Pods-Baby Puzzle";
+			productName = "Pods-Baby Puzzle";
+			productReference = 595BDD44F8D4AB26FD68F26A5AF5A860 /* Pods_Baby_Puzzle.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -365,125 +459,80 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 2FADB9A10AEBAFC80732A74224B8333C /* Products */;
+			productRefGroup = 155EB345745F335906D576E1C1BAA440 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9D1A8D61089E5A4D153D5B49C0E67E48 /* Pods-BabyPuzzle */,
-				2C6836B2F50E29AA8B6FD1649EC03389 /* Toucan */,
+				00E74CED770597EF76DEE6FE824D1B7A /* iRate */,
+				92F4D2D1590460AFB3425F4ACBDBA581 /* Pods-Baby Puzzle */,
+				26EF80C5BF5451DBC2731B8C8324224A /* Toucan */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		09E8C03BFE37E100CCFC01688025773F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		7C0FBB16A59F9F9A1B8AAEA878573753 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				790754EFB5F94995D340F7ECEAD23D29 /* Toucan-dummy.m in Sources */,
-				B3CCEEC60CC2992672BE559205C15DEA /* Toucan.swift in Sources */,
+				1CBCC11AFEC39AE34CF22778C05A0C30 /* iRate.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EBD221DECB004706AB1F89D548F27748 /* Sources */ = {
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E004260E1C87BD14AA67E957083957B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D32C802717529FE4931B9B48BA1B7A4 /* Pods-BabyPuzzle-dummy.m in Sources */,
+				390A8863AE159A26A5744AFD4D272C1B /* iRate-dummy.m in Sources */,
+				3B0BC087FEF77A4ACC7ABA82BE33FD1A /* iRate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DF83D987E2F1009B8C2605D0407711E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452F4C89E3D3BF1823E9A8FCE2CFC4AC /* Pods-Baby Puzzle-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98ADF6EF6CA7CAB52DF0CFCBD101B9DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F16307A3224D50EF59E4021DE91813B /* Toucan-dummy.m in Sources */,
+				D49E52AAAE8A63A2FFE6BC075CC0B6BF /* Toucan.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C391D0306B745A67F6310BF2E889969F /* PBXTargetDependency */ = {
+		15645118C02E3494BD3EA86D50A33D4A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Toucan;
-			target = 2C6836B2F50E29AA8B6FD1649EC03389 /* Toucan */;
-			targetProxy = 9BF70D308E26102B32A6FA8CE7A620E1 /* PBXContainerItemProxy */;
+			target = 26EF80C5BF5451DBC2731B8C8324224A /* Toucan */;
+			targetProxy = 89B4F87B750B5E850169F45467882D7E /* PBXContainerItemProxy */;
+		};
+		5C5F3F285FCF3DEAE9AAE3C58E064A1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iRate;
+			target = 00E74CED770597EF76DEE6FE824D1B7A /* iRate */;
+			targetProxy = 2FAB2C84DD8B5D23EA0F8F479AFE9555 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		183F124973750E9D657E58A4AEA2D09D /* Debug */ = {
+		0B7CDBD2C916375FEF121D0E066931BF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E64C8BF0D1A6AED9F21E92835746E0DE /* Pods-BabyPuzzle.debug.xcconfig */;
+			baseConfigurationReference = 647413FB9C400A239FFF978E2B2B41AA /* Toucan.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-BabyPuzzle/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BabyPuzzle/Pods-BabyPuzzle.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_BabyPuzzle;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3FA451D268613890FA8A5A03801E11D5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		59514FD237EB922FF851ADC6E42A2357 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2655E814C727F9B1C8A7E956FC64D25 /* Toucan.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -496,8 +545,41 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Toucan/Toucan.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Toucan;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1352CCC5FDD5263DD0980B711625DE01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70BECDC61B4833F4FEB74EE84E0439A7 /* Pods-Baby Puzzle.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Baby Puzzle/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Baby Puzzle/Pods-Baby Puzzle.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Baby_Puzzle;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -507,7 +589,36 @@
 			};
 			name = Debug;
 		};
-		5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */ = {
+		3B25D01B7EC48A87CCB5EB99147EFDD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DA5E89F2EF120CB37055F8AC2C62ACC /* iRate.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/iRate/iRate-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iRate/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/iRate/iRate.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = iRate;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		47BEF9D903506B003EA5C2B249729489 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -542,20 +653,53 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		91D5E89CC35E954A89FF818D0E17466F /* Release */ = {
+		57F361C6942E2D74A8AD4FB078248942 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2655E814C727F9B1C8A7E956FC64D25 /* Toucan.xcconfig */;
+			baseConfigurationReference = 12A6E99A8EAC5E0C8E3A45B5A74A98C4 /* Pods-Baby Puzzle.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Baby Puzzle/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Baby Puzzle/Pods-Baby Puzzle.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Baby_Puzzle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6AE0A91749F2EA7FB6C62F6A9790F0BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 647413FB9C400A239FFF978E2B2B41AA /* Toucan.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -568,57 +712,92 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Toucan/Toucan.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = Toucan;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
+			name = Debug;
+		};
+		AAF678CED40D3499169D10F63CA0719E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
 			name = Release;
 		};
-		A7B8A062ECCC3CE24D445D97C1585E75 /* Release */ = {
+		B71516F4791B3646897C651C99BC48E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2EFD75DADA91F19E789F7D96F0924BBE /* Pods-BabyPuzzle.release.xcconfig */;
+			baseConfigurationReference = 3DA5E89F2EF120CB37055F8AC2C62ACC /* iRate.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-BabyPuzzle/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/iRate/iRate-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iRate/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BabyPuzzle/Pods-BabyPuzzle.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_BabyPuzzle;
+				MODULEMAP_FILE = "Target Support Files/iRate/iRate.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = iRate;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		187D4DF0C1D581FC03167B45D6FD32AE /* Build configuration list for PBXNativeTarget "Toucan" */ = {
+		1335A5475F4F0C15206E119E10EE4CDA /* Build configuration list for PBXNativeTarget "Pods-Baby Puzzle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				59514FD237EB922FF851ADC6E42A2357 /* Debug */,
-				91D5E89CC35E954A89FF818D0E17466F /* Release */,
+				1352CCC5FDD5263DD0980B711625DE01 /* Debug */,
+				57F361C6942E2D74A8AD4FB078248942 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -626,17 +805,26 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */,
-				3FA451D268613890FA8A5A03801E11D5 /* Release */,
+				47BEF9D903506B003EA5C2B249729489 /* Debug */,
+				AAF678CED40D3499169D10F63CA0719E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A07B4C9ECD13FA1B095EE90FF8DF9D79 /* Build configuration list for PBXNativeTarget "Pods-BabyPuzzle" */ = {
+		87E0B2B42E310A5ECCFD9B0AB62464B4 /* Build configuration list for PBXNativeTarget "Toucan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				183F124973750E9D657E58A4AEA2D09D /* Debug */,
-				A7B8A062ECCC3CE24D445D97C1585E75 /* Release */,
+				6AE0A91749F2EA7FB6C62F6A9790F0BA /* Debug */,
+				0B7CDBD2C916375FEF121D0E066931BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE1D76D8FDEF2F3B0A024152D1829A0F /* Build configuration list for PBXNativeTarget "iRate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B71516F4791B3646897C651C99BC48E9 /* Debug */,
+				3B25D01B7EC48A87CCB5EB99147EFDD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
