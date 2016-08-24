@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import GoogleMobileAds
+import iRate
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,9 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FIRApp.configure()
     }
     
+    func initiRate() {        
+        iRate.sharedInstance().daysUntilPrompt = 3
+        iRate.sharedInstance().usesPerWeekForPrompt = 5
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         initFireBase()
+        initiRate()
         return true
     }
 
