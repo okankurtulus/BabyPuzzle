@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		86A4B02C061A844219EAF8AF /* Pods_BabyPuzzle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A84564B1EF296DAD1EA84F /* Pods_BabyPuzzle.framework */; };
 		B12763901D4C832B006291D8 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B127638F1D4C832B006291D8 /* background.mp3 */; };
 		B12763941D4C833D006291D8 /* applause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B12763911D4C833D006291D8 /* applause.mp3 */; };
 		B12763951D4C833D006291D8 /* expand.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B12763921D4C833D006291D8 /* expand.mp3 */; };
@@ -90,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86A4B02C061A844219EAF8AF /* Pods_BabyPuzzle.framework in Frameworks */,
 				C16D7B8A35B185BB80A20CF2 /* Pods_Baby_Puzzle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
